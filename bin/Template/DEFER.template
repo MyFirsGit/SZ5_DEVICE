@@ -1,0 +1,16 @@
+            延期凭证
+
+-------------------------------------
+
+用户卡号　：{CARD_NUM}
+车票种类　：{TICKET_TYPE}
+卡内余额　：{TICKET_BALANCE}
+卡内余次　：{TICKET_RIDES}
+原有效期　：{OLD_VALID_DATE}
+延长期限　：{DEFER_DAYS}
+新有效期　：{NEW_VALID_DATE}
+手续费　：{SERVICE_FEE}
+交易时间　：{TRANS_TIME}
+车站名称　：{STATION_NAME}
+设备编号　：{DEVICE_CODE}
+操作员ID　：{USER_ID}

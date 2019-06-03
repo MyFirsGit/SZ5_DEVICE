@@ -1,0 +1,37 @@
+﻿           [CN]硬幣箱更換憑證
+    [EN]Coin Box Exchange Receipt  
+         [PN]Recibo Operação 
+		            
+[CN]<更換前>
+[EN]<Before Replacement> 
+[PN]<Antes de Substituição> 
+[CN]錢箱A編號 {錢箱A編號}    :數量{錢箱A數量}
+[EN]Coin Valut A ID          :Count      
+[PN]A Moeda Valut ID         :Contar      
+[CN]錢箱B編號 {錢箱B編號}    :數量{錢箱B數量}
+[EN]Coin Valut B ID          :Count      
+[PN]B Moeda Valut ID         :Contar      
+
+                                        
+[CN]<更換後>
+[EN]<After Replacement>
+[PN]<Após Substituição> 
+[CN]錢箱A編號 {新錢箱A編號}  :數量{新錢箱A數量}
+[EN]Coin Valut A ID          :Count      
+[PN]A Moeda Valut ID         :Contar      
+[CN]錢箱B編號 {新錢箱B編號}  :數量{新錢箱B數量}
+[EN]Coin Valut B ID          :Count      
+[PN]B Moeda Valut ID         :Contar   
+--------------------------------------------------
+[CN]操作時間:{操作時間}
+[EN]Operation Time
+[PN]Horário de negociação
+[CN]操作員編號:{操作員編號}
+[EN]Staff ID
+[PN]Staff ID
+[CN]車站名稱:{車站名稱}
+[EN]Station Name:{Station_Name}
+[PN]Nome da estação:{Nome_da_estação}
+[CN]設備編號:{設備編號}
+[EN]Device ID
+[PN]Número do dispositivo

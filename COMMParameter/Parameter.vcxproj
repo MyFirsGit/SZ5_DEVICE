@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D5821D9B-E806-4B36-82A6-2D76978E5828}</ProjectGuid>
+    <RootNamespace>Parameter</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Keyword>MFCDLLProj</Keyword>
+    <SccAuxPath>SAK</SccAuxPath>
+    <ProjectName>COMMParameter</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COMMParameter</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;PARAMETERCOMMAND_EXPORTING;COMMON_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../COMM;../COMMACCAudit;../COMMCore;../COMMFTP;../COMMLPT;../COMMParameter;../COMMPrinter;../COMMRW;../COMMRWLib;../COMMSC;../COMMShield;../COMMSNTP;../COMMTH;../COMMTHLib;../COMMTHUpdateLib;../COMMTxnData;../COMMUSB;../COMMWavPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>COMMCore.LIB;COMM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>../Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\CParameterAPI.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>../lib/$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ProgramDatabaseFile>$(OutputPath)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\COMM;..\COMMACCAudit;..\COMMCore;..\COMMFTP;..\COMMLPT;..\COMMParameter;..\COMMPrinter;..\COMMRW;..\COMMRWLib;..\COMMSC;..\COMMShield;..\COMMSNTP;..\COMMSqlite3;..\COMMTH;..\COMMTHLib;..\COMMTHUpdateLib;..\COMMTxnData;..\COMMUPS;..\COMMUSB;..\COMMWavPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;PARAMETERCOMMAND_EXPORTING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>COMMCore.LIB;COMM.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>../Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\CParameterAPI.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>../lib/$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ProgramDatabaseFile>$(OutputPath)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CAccBasePriceParam.cpp" />
+    <ClCompile Include="CAccBusinessParam.cpp" />
+    <ClCompile Include="CAccDeviceControlParam.cpp" />
+    <ClCompile Include="CAccDiscountParam.cpp" />
+    <ClCompile Include="CAccIssueCompanyParam.cpp" />
+    <ClCompile Include="CAccLineInfoParam.cpp" />
+    <ClCompile Include="CAccNotServiceStation.cpp" />
+    <ClCompile Include="CAccOtherCityCard.cpp" />
+    <ClCompile Include="CAccOverTimeAdjuestParam.cpp" />
+    <ClCompile Include="CAccPriceAdjuest.cpp" />
+    <ClCompile Include="CAccPriceLevelParam.cpp" />
+    <ClCompile Include="CAccSectionBlackListParam.cpp" />
+    <ClCompile Include="CAccSectionParam.cpp" />
+    <ClCompile Include="CAccServiceFeeParam.cpp" />
+    <ClCompile Include="CAccSingleBlackListParam.cpp" />
+    <ClCompile Include="CAccTicketParam.cpp" />
+    <ClCompile Include="CAccTimeDetailParam.cpp" />
+    <ClCompile Include="CAccTimeFloatParam.cpp" />
+    <ClCompile Include="CAccTimeTypeParam.cpp" />
+    <ClCompile Include="CAccTollStationParam.cpp" />
+    <ClCompile Include="CAccWriteListParam.cpp" />
+    <ClCompile Include="CAfcAccessLevelParam.cpp" />
+    <ClCompile Include="CAfcBomOperationParam.cpp" />
+    <ClCompile Include="CAfcDeviceCommonParam.cpp" />
+    <ClCompile Include="CAfcDeviceTimeParam.cpp" />
+    <ClCompile Include="CAfcModeRecord.cpp" />
+    <ClCompile Include="CAfcOperatorCodeTableParam.cpp" />
+    <ClCompile Include="CAfcStaffPwdParam.cpp" />
+    <ClCompile Include="CEctBlackListParam.cpp" />
+    <ClCompile Include="CEctParamMaster.cpp" />
+    <ClCompile Include="CNamedCardApplyResult.cpp" />
+    <ClCompile Include="CParameterAPI.cpp" />
+    <ClCompile Include="CParamHelp.cpp" />
+    <ClCompile Include="CPWDInputError.cpp" />
+    <ClCompile Include="CRefundApplyResult.cpp" />
+    <ClCompile Include="CTIssuePermit.cpp" />
+    <ClCompile Include="CTLOGCountInfo.cpp" />
+    <ClCompile Include="CTLOGDeviceInfo.cpp" />
+    <ClCompile Include="CTLOGPresellTicketInfo.cpp" />
+    <ClCompile Include="CTLOGRegister.cpp" />
+    <ClCompile Include="CTLOGSoftVer.cpp" />
+    <ClCompile Include="CTMessageAudit.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="CAfcParamMaster.cpp" />
+    <ClCompile Include="CAccParamMaster.cpp" />
+    <ClCompile Include="CParamException.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CAccBasePriceParam.h" />
+    <ClInclude Include="CAccBusinessParam.h" />
+    <ClInclude Include="CAccDeviceControlParam.h" />
+    <ClInclude Include="CAccDiscountParam.h" />
+    <ClInclude Include="CAccIssueCompanyParam.h" />
+    <ClInclude Include="CAccLineInfoParam.h" />
+    <ClInclude Include="CAccNotServiceStation.h" />
+    <ClInclude Include="CAccOtherCityCard.h" />
+    <ClInclude Include="CAccOverTimeAdjuestParam.h" />
+    <ClInclude Include="CAccParamMaster.h" />
+    <ClInclude Include="CAccPriceAdjuest.h" />
+    <ClInclude Include="CAccPriceLevelParam.h" />
+    <ClInclude Include="CAccSectionBlackListParam.h" />
+    <ClInclude Include="CAccSectionParam.h" />
+    <ClInclude Include="CAccServiceFeeParam.h" />
+    <ClInclude Include="CAccSingleBlackListParam.h" />
+    <ClInclude Include="CAccTicketParam.h" />
+    <ClInclude Include="CAccTimeDetailParam.h" />
+    <ClInclude Include="CAccTimeFloatParam.h" />
+    <ClInclude Include="CAccTimeTypeParam.h" />
+    <ClInclude Include="CAccTollStationParam.h" />
+    <ClInclude Include="CAccWriteListParam.h" />
+    <ClInclude Include="CAfcAccessLevelParam.h" />
+    <ClInclude Include="CAfcBomOperationParam.h" />
+    <ClInclude Include="CAfcDeviceCommonParam.h" />
+    <ClInclude Include="CAfcDeviceTimeParam.h" />
+    <ClInclude Include="CAfcModeRecord.h" />
+    <ClInclude Include="CAfcOperatorCodeTableParam.h" />
+    <ClInclude Include="CAfcParamMaster.h" />
+    <ClInclude Include="CAfcStaffPwdParam.h" />
+    <ClInclude Include="CEctBlackListParam.h" />
+    <ClInclude Include="CEctParamMaster.h" />
+    <ClInclude Include="CNamedCardApplyResult.h" />
+    <ClInclude Include="CParameterAPI.h" />
+    <ClInclude Include="CParameterCommandExp.h" />
+    <ClInclude Include="CParameterMaster.h" />
+    <ClInclude Include="CParamException.h" />
+    <ClInclude Include="CParamHelp.h" />
+    <ClInclude Include="CPWDInputError.h" />
+    <ClInclude Include="CRefundApplyResult.h" />
+    <ClInclude Include="CTIssuePermit.h" />
+    <ClInclude Include="CTLOGCountInfo.h" />
+    <ClInclude Include="CTLOGDeviceInfo.h" />
+    <ClInclude Include="CTLOGPresellTicketInfo.h" />
+    <ClInclude Include="CTLOGRegister.h" />
+    <ClInclude Include="CTLOGSoftVer.h" />
+    <ClInclude Include="CTMessageAudit.h" />
+    <ClInclude Include="ParameterDef.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CParameterAPI.def" />
+    <None Include="res\Parameter.rc2" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Parameter.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\COMM\Common.vcxproj">
+      <Project>{0e358096-a972-42ee-be47-ef58e28d58c4}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Parameter.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

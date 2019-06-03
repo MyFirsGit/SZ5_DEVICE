@@ -1,0 +1,12 @@
+          车票编号：    {TICKET_NUMBER}
+          车票种类：    {TICKET_KIND}
+          发行日期：    {TICKET_PUBLISH_DATE}
+          售票时间：    {TICKET_SALETIME}
+            有效期：    {TICKET_VALIDATE}
+          票内余额：    {TICKET_BALANCE}
+          车票状态：    {TICKET_STATUS}
+          激活状态：    {ACTIVE_STATUS}
+          旅程状态：    {JOURNEY_STATUS}
+          进站车站：    {ENTER_STATION}
+          进站时间：    {ENTER_TIME}
+          起始车站：    {START_STATION}

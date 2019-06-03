@@ -1,0 +1,9 @@
+#pragma once
+
+typedef enum _tagSCSvcResult
+{
+	SCSVC_RESULT_OK = 0X0000,
+	SCSVC_RESULT_NOT_CONNECTED = 0X0001,
+	SCSVC_RESULT_INTERNAL_ERROR = 0X0100,
+
+} SCSvcResult ;

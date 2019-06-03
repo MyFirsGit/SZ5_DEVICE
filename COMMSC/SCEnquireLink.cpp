@@ -1,0 +1,81 @@
+
+#include "stdafx.h"
+#include "SCEnquireLink.h"
+#include "scclient.h"
+#include "HeaderManager.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      心跳命令构造函数
+
+@param      无
+
+@retval     无
+
+@exception  无
+*/
+//////////////////////////////////////////////////////////////////////////
+CSCEnquireLink::CSCEnquireLink():CSCCommand()
+{
+	
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      析构函数
+
+@param      无
+
+@retval     无
+
+@exception  无
+*/
+//////////////////////////////////////////////////////////////////////////
+CSCEnquireLink::~CSCEnquireLink()
+{
+
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+long CSCEnquireLink::IsValidCommand()
+{
+	return SP_SUCCESS;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      执行命令
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+long CSCEnquireLink::ExecuteCommand()
+{
+	long lRet = -1;
+	m_Header.bDataTransType = PROTOCAL_DATA;
+	m_Header.nwTransId = CHeaderManager::AquireNewID(CMD_ENQUIRE_LINK);
+	m_Header.bCrcType = 0x00;//不计算CRC
+	
+	theClient.Send(this);
+	return SP_SUCCESS;
+}

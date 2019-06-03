@@ -1,0 +1,80 @@
+//#include "stdafx.h"
+//#include "IOCommand.h"
+//#include "IOException.h"
+//
+//#ifdef _DEBUG
+//#define new DEBUG_NEW
+//#undef THIS_FILE
+//static char THIS_FILE[] = __FILE__;
+//#endif
+//
+////////////////////////////////////////////////////////////////////////////
+///**
+// @brief				构造函数
+//                                                                 
+// @param			无
+//
+// @retval			无
+//
+// @exception		无
+//*/
+////////////////////////////////////////////////////////////////////////////
+//CIOClose::CIOClose(void)
+//{
+//}
+//
+////////////////////////////////////////////////////////////////////////////
+///**
+// @brief				析构函数
+//                                                                 
+// @param			无
+//
+// @retval			无
+//
+// @exception		无
+//*/
+////////////////////////////////////////////////////////////////////////////
+//CIOClose::~CIOClose(void)
+//{
+//}
+//
+////////////////////////////////////////////////////////////////////////////
+///**
+// @brief			关闭串口
+//                                                                 
+// @param      无
+//
+// @retval		long   0 : 成功  非0 : 失败 
+//
+// @exception  无
+//*/
+////////////////////////////////////////////////////////////////////////////
+//long CIOClose::CloseFunction()
+//{
+//	IOTRS_RESULT lRet = 0;
+//	lRet = IOTrs_Close(m_hTVMIO);
+//	if(lRet != IOTRS_RES_OK){
+//		lRet = CIOException::ERROR_IO_CLOSE;
+//	}
+//	return lRet;
+//}
+//
+////////////////////////////////////////////////////////////////////////////
+///**
+// @brief      执行命令
+//                                                                 
+// @param      (i)无
+//
+// @retval      long   \n 
+//                  0 : 成功   非0 : 失败 
+//
+// @exception   
+//*/
+////////////////////////////////////////////////////////////////////////////
+//long CIOClose::ExecuteCommand()
+//{
+//	long iRet = 1;
+//	iRet = CloseFunction();
+//	this->OnComplete(iRet);
+//	return iRet;
+//}

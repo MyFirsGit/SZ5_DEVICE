@@ -1,0 +1,61 @@
+#include "stdafx.h"
+#include "BHCommand.h"
+#include "BHException.h"
+//#include "bh_proto.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+bool isBHAbort = false;		// 纸币接收模块是否需要中止动作
+//////////////////////////////////////////////////////////////////////////
+/**
+ @brief		构造函数
+
+ @param		无
+
+ @retval	无  
+
+ @exception	无
+*/
+//////////////////////////////////////////////////////////////////////////
+CBHAbortAction::CBHAbortAction()
+{
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+ @brief		析构函数
+
+ @param		无
+
+ @retval	无  
+
+ @exception	无
+*/
+//////////////////////////////////////////////////////////////////////////
+CBHAbortAction::~CBHAbortAction()
+{
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+ @brief		执行命令
+
+ @param		无
+
+ @retval	long	\n
+			0 : 成功	非0 : 失败
+
+ @exception	无
+*/
+//////////////////////////////////////////////////////////////////////////
+long CBHAbortAction::ExecuteCommand()
+{
+	isBHAbort = true;
+	this->OnComplete(0);
+	return 0;
+}
+

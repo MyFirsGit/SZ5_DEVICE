@@ -1,0 +1,14 @@
+             挂失凭证{SUSPEND_TITLE}
+             解挂凭证{RESUME_TITLE}
+
+-------------------------------------
+
+用户姓名  ： {USER_NAME}
+用户性别  ： {USER_SEX}
+证件类型  ： {CERTIFICATE_TYPE}
+证件号码  ： {CERTIFICATE_NUM}
+收据编号  ： {BILL_NUM}
+交易时间  ： {TRANS_TIME}
+车站名称  ： {STATION_NAME}
+设备编号  ： {DEVICE_CODE}
+操作员ID  ： {USER_ID}

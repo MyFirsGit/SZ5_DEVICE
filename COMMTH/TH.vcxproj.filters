@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0703f5c5-c5d1-4283-b5a5-8d1b151df4e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d43b9c3d-2d63-4969-88a7-83de8bf67f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exception">
+      <UniqueIdentifier>{81e2b349-b68b-4f05-afd0-e5fab2b37367}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="THAPP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="THControl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="THMessage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="THException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="THHardwareException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="THAPP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="THControl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="THExp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="THMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="THException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="THHardwareException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

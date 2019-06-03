@@ -1,0 +1,18 @@
+             充值凭证
+
+-------------------------------------
+
+用户卡号  ： {CARD_NUM}
+车票种类  ： {TICKET_TYPE}
+有效期限  ： {VALID_DATE}
+充值前余额： {BEFORE_CHARGE_AMOUNT}
+充值金额  ： {CHARGE_AMOUNT}
+充值后余额： {AFTER_CHARGE_AMOUNT}
+充值前余次： {BEFORE_CHARGE_TIMES}
+充值次数  ： {CHARGE_TIMES}
+充值后余次： {AFTER_CHARGE_TIMES}
+交易金额  ： {TRANS_AMOUNT}
+交易时间  ： {TRANS_TIME}
+车站名称  ： {STATION_NAME}
+设备编号  ： {DEVICE_CODE}
+操作员ID  ： {USER_ID}

@@ -1,0 +1,1392 @@
+#include "StdAfx.h"
+#include "ESInfo.h"
+#include "SysException.h"
+#include "Util.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+
+CESInfo CESInfo::theInstance;
+
+CESInfo& CESInfo::GetInstance()
+{
+	return theInstance;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief      构造函数
+
+@param      无
+
+@retval     无
+
+@exception  无
+*/
+//////////////////////////////////////////////////////////////////////////
+CESInfo::CESInfo()
+{
+    try {
+        // 初期化
+        Initialize();
+    }
+    catch (...) {
+        // 忽略异常信息
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief      析构函数
+
+@param      无
+
+@retval     无
+
+@exception  无
+*/
+//////////////////////////////////////////////////////////////////////////
+CESInfo::~CESInfo()
+{
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief      在目录名后添加反斜杠
+//
+//@param      (i)CString sPath    目录
+//
+//@retval     CString     右面带反斜杠的目录名
+//
+//@exception  none
+//*/
+//////////////////////////////////////////////////////////////////////////
+//CString CESInfo::AddBackslash(CString sPath)
+//{
+//	if(sPath.IsEmpty()){
+//		return sPath;
+//	}
+//
+//    return sPath.TrimRight(_T("\\")) + _T("\\");
+//}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取初期安装的版本信息
+
+@param       无 
+
+@retval      CString 
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetInitialVersion()
+{
+    return m_DeviceIni->GetDataString(_T("APPLICATION"), _T("InitialVersion"));
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       是否显示在最前面
+//
+//@param       无
+//
+//@retval      bool true:在最前面 ; false:不在最前面
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsTopmost()
+{
+    return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("TopMost"), 1) == 0 ? false : true;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      
+
+@param
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsFunctionKeyEnabled()
+{
+	 return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("FunctionKeyEnable"), 1) != 0 ;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief  是否启用任务管理器    
+
+@param
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsTaskManagerEnabled()
+{
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("TaskManagerEnabled"), 1) != 0 ;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      是否启用桌面
+
+@param
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+bool    CESInfo::IsDesktopEnabled()
+{
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("DesktopEnabled"), 1) != 0 ;
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       是否显示鼠标光标
+//
+//@param       无
+//
+//@retval      bool true:显示 ; false:不显示
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+bool CESInfo::CanShowCursor()
+{
+    return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("ShowCursor")) == 0 ? false : true;
+}
+//
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取主数据目录
+//
+//@param       无 
+//
+//@retval      CString
+//
+//@exception   无
+//*/
+//////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetDataPath()
+{
+    return AddBackslash(m_DeviceIni->GetDataString(_T("APPLICATION"), _T("DataPath")));
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取备份目录
+//
+//@param       无 
+//
+//@retval      CString
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetBackupPath()
+{
+    return AddBackslash(m_DeviceIni->GetDataString(_T("APPLICATION"), _T("BackupPath")));
+}
+
+////////////////////////////////////////////////////////////////////////////
+/*
+@brief       获取日志目录
+
+@param       none
+
+@retval      CString
+
+@exception   无
+*/
+////////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetLogPath()
+{
+	CString strLogPath =  m_DeviceIni->GetDataString(_T("APPLICATION"), _T("LogPath"),_T(""));
+	if(strLogPath == _T("")){
+		strLogPath = GetDataPath() + _T("\\Log");
+	}
+	else{
+		strLogPath = AddBackslash(strLogPath);
+	}
+	return strLogPath;
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取允许最大未送数据天数
+//
+//@param       无 
+//
+//@retval      UINT
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+UINT CESInfo::GetLimitedDaysOfUnSendData()
+{
+	return m_DeviceIni->GetDataInt(_T("TXNDATA"),_T("UnsendMaxDay"),7);
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取已送数据保留天数
+//
+//@param       无 
+//
+//@retval      UINT
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+UINT CESInfo::GetLimitedDaysOfSendData()
+{
+	return m_DeviceIni->GetDataInt(_T("TXNDATA"),_T("SendedMaxDay"),10);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief   取得交易打包间隔 （单位：秒）  
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetTransactionPackageInterval()
+{
+	return m_DeviceIni->GetDataInt(_T("INTERVAL"), _T("TRANSACTION_PACKAGE"),30);
+}
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      取得业务数据打包间隔时间（单位：秒）
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetBusinessPackageInterval()
+{
+	return m_DeviceIni->GetDataInt(_T("INTERVAL"), _T("BUSINESS_PACKAGE"),30);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取BOM 控制部程序 上传路径
+
+@param       无 
+
+@retval      CString
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetBomExportPath()
+{
+	return AddBackslash(m_DeviceIni->GetDataString(_T("MOVEDISK"), _T("ExportPath")));
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       是否记录Debug消息
+
+@param       无
+
+@retval      bool true:记录Debug消息 ; false:不记录Debug消息
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+ bool CESInfo::IsWriteDebug()
+ {
+    return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("WriteDebug")) == 0 ? false : true;
+ }
+
+ //////////////////////////////////////////////////////////////////////////
+ /**
+ @brief       是否开启守护进程
+
+ @param       无
+
+ @retval      bool true:开启守护进程 ; false:不开启守护进程
+
+ @exception   无
+ */
+ //////////////////////////////////////////////////////////////////////////
+ bool CESInfo::IsUsedGuardian()
+ {
+	 return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("IsUsedGuardian")) == 0 ? false : true;
+ }
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       是否启用方正员工
+//
+//@param       无
+//
+//@retval      bool true:启用 ; false:不启用
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsUseFounderStaffID()
+{
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("UseFounderStaff"),0) == 0 ? false : true;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取欧姆龙员工ID
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetFounderStaffID()
+{
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("FounderStaffID"), 10101028);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsFounderStaffID(int userID)
+{
+	return IsUseFounderStaffID() && (GetFounderStaffID() == userID);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取欧姆龙员工密码
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetFounderStaffPassword()
+{
+	return m_DeviceIni->GetDataString(_T("APPLICATION"), _T("FounderStaffPassword"), _T("888888"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief        取得业务结束最大等待时间单位（秒）
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+
+int CESInfo::GetCloseOperationMaxWaitSeconds()
+{
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("CloseOperationMaxWaitSeconds"),10*60);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief    是否需要校验未送交易数据包  
+
+@param
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsValidateUnSendPackage()
+{
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("ValidateUnSendPackage"),1) != 99;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取USB认证方式（0：不认证；1：需要认证）
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetUSBAuthFlag()
+{
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("UsbAuthorizeManner"), 0);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取状态栏刷新时间间隔
+
+@param        
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetStatusTimerInterval()
+{
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("StatusTimerInterval"), 1000);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取MAGAZINE串口号
+
+@param       none 
+
+@retval      int
+
+@exception   none
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetMagazineCommPort()
+{
+    return m_DeviceIni->GetDataInt(_T("MAGAZINE"), _T("COMM_PORT"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取Connect1BaudRate
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetMagazineBaudRate()
+{
+    return m_DeviceIni->GetDataInt(_T("MAGAZINE"), _T("BAUD_RATE"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取票箱压票的最大数量
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetPressCardMaxCount()
+{
+	return m_DeviceIni->GetDataInt(_T("MAGAZINE"), _T("PRESSCARD_COUNT"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取票箱最大容量
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetMagazineMaxCapacity()
+{
+	return m_DeviceIni->GetDataInt(_T("MAGAZINE"), _T("MAX_CAPACITY"));
+}
+
+////////////////////////////////////////////////////////////////////////
+/*
+@brief    票箱监控开关  
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsMagazineMonitorOpened()
+{
+	return (m_DeviceIni->GetDataInt(_T("MAGAZINE"),_T("MONITOR_SWITCH"),0) == 1);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      票箱监控计时间隔
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetMagazineMonitorInterval()
+{
+	return m_DeviceIni->GetDataInt(_T("MAGAZINE"),_T("MONITOR_INTERVAL"),5000);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       判断是否使用读写器
+
+@param       (i)bool isRW  true:外部读写器  false:内部读写器
+
+@retval      bool true:使用读写器  false:使用模拟数据
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsRWUsed(RW_TYPE rwType)
+{
+	return (m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("IS_USED")) == 1);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief   读写器监控开关   
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+bool	CESInfo::IsRWMonitorOpened(RW_TYPE rwType)
+{
+	return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("MONITOR_SWITCH"),0)!=0;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief    读写器监控间隔  
+
+@param		(i)RW_TYPE rwType  读写器类型
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+int     CESInfo::GetRWMonitorInterval(RW_TYPE rwType)
+{
+	return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("MONITOR_INTERVAL"),30);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取外部读写器串口号
+
+@param       (i)RW_TYPE rwType  读写器类型
+
+@retval      int 串口号
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetRWCommPort(RW_TYPE rwType)
+{
+    return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("COMM_PORT"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取外部读写器串口波特率
+
+@param       (i)RW_TYPE rwType  读写器类型
+
+@retval      int 串口波特率
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetRWBaudRate(RW_TYPE rwType)
+{
+    return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("BAUD_RATE"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       取得模拟卡物理类型，读卡使用
+
+@param       (i)RW_TYPE rwType  读写器类型
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetSimCardType(RW_TYPE rwType)
+{
+	return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("SIM_CARD_TYPE"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       取得读卡时间间隔
+
+@param       (i)RW_TYPE rwType  读写器类型
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int	CESInfo::GetReadCardInterval(RW_TYPE rwType)
+{
+	return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("READ_CARD_INTERVAL"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       取得母卡的卡槽
+
+@param       (i)RW_TYPE rwType  读写器类型
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int	CESInfo::GetMasterCardSlot(RW_TYPE rwType)
+{
+	return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("CMC_Slot"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       传输卡的卡槽
+
+@param       (i)RW_TYPE rwType  读写器类型
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int	CESInfo::GetTrandferCardSlot(RW_TYPE rwType)
+{
+	return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("CMCT_Slot"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       PIN码的长度
+
+@param       (i)RW_TYPE rwType  读写器类型
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetPinLen(RW_TYPE rwType)
+{
+	return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("ICMCT_PIN_Len"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       发行卡母卡传输卡的PIN码
+
+@param       (i)RW_TYPE rwType  读写器类型
+
+@retval      CString
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetPinBuffer(RW_TYPE rwType)
+{
+	return m_DeviceIni->GetDataInt(GetRWTypeString(rwType), _T("ICMCT_PIN_buff"));
+}
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       判断是否使用打印机
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsPrinterUsed()
+{
+	return (m_DeviceIni->GetDataInt(_T("PRINTER"), _T("IS_USED")) == 1);
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取Connect3CommPort
+//
+//@param       无 
+//
+//@retval      int
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetPrinterCommPort()
+{
+    return m_DeviceIni->GetDataInt(_T("PRINTER"), _T("COMM_PORT"));
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取Connect3BaudRate
+//
+//@param       无 
+//
+//@retval      int
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetPrinterBaudRate()
+{
+   return m_DeviceIni->GetDataInt(_T("PRINTER"), _T("BAUD_RATE"));
+}
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取打印字体
+//
+//@param       无 
+//
+//@retval      int
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetPrintType()
+{
+	return m_DeviceIni->GetDataInt(_T("PRINTER"),_T("PRINT_TYPE"));
+}
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取打印方向
+//
+//@param       无 
+//
+//@retval      int
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetPrintDiret()
+{
+	return m_DeviceIni->GetDataInt(_T("PRINTER"),_T("PRINT_Diret"));
+}
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取行间距
+//
+//@param       无 
+//
+//@retval      int
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetPrintRowDis()
+{
+	return m_DeviceIni->GetDataInt(_T("PRINTER"),_T("PRINT_ROWDIS"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       判断是否使用票卡打印机
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsCardPrinterUsed()
+{
+	return (m_DeviceIni->GetDataInt(_T("CARD_PRINTER"), _T("IS_USED")) == 1);
+}
+
+////////////////////////////////////////////////////////////////////////////
+/*
+@brief       获取ES1串口号
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetTOKEN_ESCommPort()
+{
+	return m_DeviceIni->GetDataInt(_T("ES_TOKEN"), _T("COMM_PORT"));	
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       判断是否使用ES2
+
+@param       无 
+
+@retval      bool
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsTOKEN_ESUsed()
+{
+	return (m_DeviceIni->GetDataInt(_T("ES_TOKEN"), _T("IS_USED")) == 1);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       判断指定的模块是否使用
+
+@param       (i)ES_MODULE_NUMBER moduleID模块编号 
+
+@retval      bool
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsModuleUsed(ES_MODULE_NUMBER moduleID)
+{
+	CString module = _T("");
+	switch(moduleID)
+	{
+	case ES_MODULE_NUMBER_1:
+		module = _T("IS_MODULE1_USED");
+		break;
+	case ES_MODULE_NUMBER_2:
+		module = _T("IS_MODULE2_USED");
+		break;
+	case ES_MODULE_NUMBER_3:
+		module = _T("IS_MODULE3_USED");
+		break;
+	}
+	return (m_DeviceIni->GetDataInt(_T("ES"), module) == 1);
+}
+
+////////////////////////////////////////////////////////////////////////////
+/*
+@brief       获取票卡打印机驱动名称
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetCardType()
+{
+	return m_DeviceIni->GetDataInt(_T("CARD_PRINTER"), _T("CARD_TYPE"));	
+}
+
+////////////////////////////////////////////////////////////////////////////
+/*
+@brief       发卡测试次数
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetTestSendCardCount()
+{
+	return m_DeviceIni->GetDataInt(_T("CARD_PRINTER"), _T("TEST_SEND_CARD_COUNT "));
+}
+
+////////////////////////////////////////////////////////////////////////////
+/*
+@brief       获取票卡打印机打印临时文件名
+
+@param       无 
+
+@retval      CString
+
+@exception   无
+*/
+////////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetPrinterTempFile()
+{
+	return m_DeviceIni->GetDataString(_T("CARD_PRINTER"), _T("PRT_TEMP"));
+}
+
+////////////////////////////////////////////////////////////////////////////
+/*
+@brief       获取打印机名称
+
+@param       无 
+
+@retval      CString
+
+@exception   无
+*/
+////////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetCardPrinterDriverName()
+{
+	return m_DeviceIni->GetDataString(_T("CARD_PRINTER"), _T("DRIVER_NAME"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       判断是否使用ES
+
+@param       无 
+
+@retval      bool
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsCARD_ESUsed()
+{
+	return (m_DeviceIni->GetDataInt(_T("ES"), _T("IS_USED")) == 1);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取ES串口号CommPort
+
+@param       无 
+
+@retval      bool
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetCARD_ESCommPort()
+{
+	return m_DeviceIni->GetDataInt(_T("ES"), _T("COMM_PORT"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取ES波特率BaudRate
+
+@param       无 
+
+@retval      bool
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetCARD_ESBaudRate()
+{
+	return m_DeviceIni->GetDataInt(_T("ES"), _T("BAUD_RATE"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取UpsUsed
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsUPSUsed()
+{
+    return (m_DeviceIni->GetDataInt(_T("UPS"), _T("IS_USED")) == 1);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取UPS CommPort
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetUPSCommPort()
+{
+	return m_DeviceIni->GetDataInt(_T("UPS"), _T("COMM_PORT"));
+}
+
+////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取UPS BaudRate
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+////////////////////////////////////////////////////////////////////////
+int CESInfo::GetUPSBaudRate()
+{
+	return m_DeviceIni->GetDataInt(_T("UPS"), _T("BAUD_RATE"));
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       获取USB 使用的 盘符
+//
+//@param       无 
+//
+//@retval      CString
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetBOMUSBDrive()
+{
+    return AddBackslash(m_DeviceIni->GetDataString(_T("MOVEDISK"), _T("USBDRIVE")));
+}
+
+////////////////////////////////////////////////////////////////////////////
+/**
+@brief      取得数据纪录保存的天数
+
+@param      none
+
+@retval     int
+
+@exception  none
+*/
+////////////////////////////////////////////////////////////////////////////
+int CESInfo::GetStoreDay()
+{
+    return m_DeviceIni->GetDataInt(_T("LOG"), _T("StoreDay"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief      取得数据纪录实际保存的天数
+
+@param      none
+
+@retval     int
+
+@exception  none
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetRealStoreDay()
+{
+	return m_DeviceIni->GetDataInt(_T("LOG"), _T("RealStoreDay"));
+}
+
+////////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取ES系统正在使用的网卡名称
+
+@param       none 
+
+@retval      CString 网卡名称
+
+@exception   none
+*/
+////////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetUsedAdapterName()
+{
+	return m_DeviceIni->GetDataString(_T("MACHINE"), _T("ESUSED_ADAPTER_NAME"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief    取得读写器在配置文件中的名称  
+
+@param
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetRWTypeString(RW_TYPE rwType)
+{
+	switch(rwType)
+	{
+	case ES_TOKEN_RW1 : return _T("RW_TOKEN_ONE");
+	case ES_TOKEN_RW2: return _T("RW_TOKEN_TWO");
+	case ES_TOKEN_RW3 : return _T("RW_TOKEN_THREE");
+	case ES_CARD_RW   : return _T("RW_ES_CARD");
+	case PM_RW     : return _T("RW_PM");
+	default:
+		return _T("RW_ES_CARD");
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief    取得电子标签在配置文件中的名称  
+
+@param
+
+@retval   CString  
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetRfidTypeString(RFID_NO rfidId)
+{	switch(rfidId)
+	{
+	case RFID_1 : return _T("RFID_ONE");
+	case RFID_2 : return _T("RFID_TWO");
+	case RFID_3 : return _T("RFID_THREE");
+	case RFID_4 : return _T("RFID_FOUR");
+	default:
+		return _T("RFID");
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取RFIDUsed
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsRfidUsed(RFID_NO rfidId)
+{
+	return (m_DeviceIni->GetDataInt(GetRfidTypeString(rfidId), _T("IS_USED")) == 1);
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取RFID串口号
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetRfidCommPort(RFID_NO rfidId)
+{
+	return m_DeviceIni->GetDataInt(GetRfidTypeString(rfidId), _T("COMM_PORT"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取RFID波特率
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetRfidBaudRate(RFID_NO rfidId)
+{
+	return m_DeviceIni->GetDataInt(GetRfidTypeString(rfidId), _T("BAUD_RATE"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取RFID停止位
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetRfidStopBit(RFID_NO rfidId)
+{
+	return m_DeviceIni->GetDataInt(GetRfidTypeString(rfidId), _T("STOP_BIT"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取RFID奇偶校验
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetRfidParity(RFID_NO rfidId)
+{
+	return m_DeviceIni->GetDataString(GetRfidTypeString(rfidId), _T("PARITY"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取RFID字节大小
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetRfidByteSize(RFID_NO rfidId)
+{
+	return m_DeviceIni->GetDataInt(GetRfidTypeString(rfidId), _T("BYTE_SIZE"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取RFID输入缓冲区大小
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetRfidInputSize(RFID_NO rfidId)
+{
+	return m_DeviceIni->GetDataInt(GetRfidTypeString(rfidId), _T("INPUT_SIZE"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取RFID输出缓冲区大小
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int  CESInfo::GetRfidOutputSize(RFID_NO rfidId)
+{
+	return m_DeviceIni->GetDataInt(GetRfidTypeString(rfidId), _T("OUTPUT_SIZE"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取计时器时间
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetTxnIntervalTime()
+{
+	return m_DeviceIni->GetDataInt(_T("TRANSMISSION"), _T("TXN_INTERVAL_TIME"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       获取包传输审计计时
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetAuditInterval()
+{
+	return m_DeviceIni->GetDataInt(_T("TRANSMISSION"), _T("AUDITINTERVAL"));
+}
+
+
+//////////////////////////////////////////////////////////////////////////
+/**
+@brief       业务数据的上送时间
+
+@param       无 
+
+@retval      int
+
+@exception   无
+*/
+//////////////////////////////////////////////////////////////////////////
+int CESInfo::GetBusinessInterval()
+{
+	return m_DeviceIni->GetDataInt(_T("TRANSMISSION"), _T("BUSINESS_INTERVAL_TIME"));
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      是否删除参数协议头
+
+@param      无
+
+@retval     bool true:删除；false：不删除
+
+@exception  无
+*/
+//////////////////////////////////////////////////////////////////////////
+bool CESInfo::IsDeleteParameterHead(){
+	return m_DeviceIni->GetDataInt(_T("APPLICATION"), _T("IsDeleteParameterHead"), 1) == 0 ? false:true;
+}
+
+//////////////////////////////////////////////////////////////////////////
+/*
+@brief      获取MTC前两字节编码
+
+@param      
+
+@retval     
+
+@exception  
+*/
+//////////////////////////////////////////////////////////////////////////
+CString CESInfo::GetDeviceComponentCode (long moudleID)
+{
+	CString strMouldeID;
+	strMouldeID.Format(_T("%d"),moudleID);
+	return m_DeviceIni->GetDataString(_T("ES_COMPONENT_ID"),strMouldeID,_T(""));	
+}

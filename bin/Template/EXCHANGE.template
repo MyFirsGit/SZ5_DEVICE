@@ -1,0 +1,12 @@
+             换卡凭证
+
+-------------------------------------
+
+凭条号  ： {BILL_NUM}
+车站名称  ： {STATION_NAME}
+设备编号  ： {DEVICE_CODE}
+员工号  ： {USER_ID}
+用户卡号  ： {CARD_NUM}
+卡片类型  ： {TICKET_TYPE}
+卡有效期  ： {VALID_DATE}
+交易时间  ： {TRANS_TIME}

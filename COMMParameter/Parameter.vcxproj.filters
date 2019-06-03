@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="AFC">
+      <UniqueIdentifier>{e97ba436-dbd2-4564-a8f9-8b134ccba859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ACC">
+      <UniqueIdentifier>{6dd6fbbb-666c-4830-b459-324e69e363f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exception">
+      <UniqueIdentifier>{202f8367-495e-476e-bfad-6db6d0595d87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TCM">
+      <UniqueIdentifier>{be465c5d-dd87-433f-a7fb-781a51e52d5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BOM">
+      <UniqueIdentifier>{64741b65-9092-4302-9005-719e99df1f4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ECT">
+      <UniqueIdentifier>{161e57ca-d0f3-461b-9bfe-e79955e6f86c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CParameterAPI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CParamHelp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcParamMaster.cpp">
+      <Filter>AFC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccParamMaster.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CParamException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="CNamedCardApplyResult.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CPWDInputError.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CRefundApplyResult.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CTIssuePermit.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CTLOGCountInfo.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CTLOGDeviceInfo.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CTLOGPresellTicketInfo.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CTLOGRegister.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CTLOGSoftVer.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CTMessageAudit.cpp">
+      <Filter>BOM</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccBasePriceParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccBusinessParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccDeviceControlParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccDiscountParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccIssueCompanyParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccLineInfoParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccNotServiceStation.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccOtherCityCard.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccOverTimeAdjuestParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccPriceAdjuest.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccPriceLevelParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccSectionBlackListParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccSectionParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccSingleBlackListParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccTicketParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccTimeDetailParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccTimeFloatParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccTimeTypeParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccTollStationParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccWriteListParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcAccessLevelParam.cpp">
+      <Filter>AFC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcBomOperationParam.cpp">
+      <Filter>AFC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcDeviceCommonParam.cpp">
+      <Filter>AFC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcDeviceTimeParam.cpp">
+      <Filter>AFC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcModeRecord.cpp">
+      <Filter>AFC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcOperatorCodeTableParam.cpp">
+      <Filter>AFC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcStaffPwdParam.cpp">
+      <Filter>AFC</Filter>
+    </ClCompile>
+    <ClCompile Include="CAccServiceFeeParam.cpp">
+      <Filter>ACC</Filter>
+    </ClCompile>
+    <ClCompile Include="CEctBlackListParam.cpp">
+      <Filter>ECT</Filter>
+    </ClCompile>
+    <ClCompile Include="CEctParamMaster.cpp">
+      <Filter>ECT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CAccParamMaster.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcParamMaster.h">
+      <Filter>AFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CParamException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="CParameterAPI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CParameterCommandExp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CParameterMaster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CParamHelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CNamedCardApplyResult.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CPWDInputError.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CRefundApplyResult.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CTIssuePermit.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CTLOGCountInfo.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CTLOGDeviceInfo.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CTLOGPresellTicketInfo.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CTLOGRegister.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CTLOGSoftVer.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CTMessageAudit.h">
+      <Filter>BOM</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccBasePriceParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccBusinessParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccDeviceControlParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccDiscountParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccIssueCompanyParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccLineInfoParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccNotServiceStation.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccOtherCityCard.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccOverTimeAdjuestParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccPriceAdjuest.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccPriceLevelParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccSectionBlackListParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccSectionParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccSingleBlackListParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccTicketParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccTimeDetailParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccTimeFloatParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccTimeTypeParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccTollStationParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccWriteListParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcAccessLevelParam.h">
+      <Filter>AFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcBomOperationParam.h">
+      <Filter>AFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcDeviceCommonParam.h">
+      <Filter>AFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcDeviceTimeParam.h">
+      <Filter>AFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcModeRecord.h">
+      <Filter>AFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcOperatorCodeTableParam.h">
+      <Filter>AFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcStaffPwdParam.h">
+      <Filter>AFC</Filter>
+    </ClInclude>
+    <ClInclude Include="CAccServiceFeeParam.h">
+      <Filter>ACC</Filter>
+    </ClInclude>
+    <ClInclude Include="CEctParamMaster.h">
+      <Filter>ECT</Filter>
+    </ClInclude>
+    <ClInclude Include="CEctBlackListParam.h">
+      <Filter>ECT</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Parameter.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="CParameterAPI.def">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Parameter.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

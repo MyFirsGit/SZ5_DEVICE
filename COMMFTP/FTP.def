@@ -1,0 +1,7 @@
+; CTFTPLIB.def : Declares the module parameters for the DLL.
+
+LIBRARY      "COMMFTP"
+
+EXPORTS
+    ; Explicit exports can go here
+	GetCreatedTimeOfFile

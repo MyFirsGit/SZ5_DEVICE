@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tts>
+  <event id="1001" defaultLanguageId="zh-cn">
+    <voice languageId="zh-cn" file="audio\1001-zh-cn.wav" text="欢迎光临, 请选择画面上的按钮" />
+    <voice languageId="en-us" file="audio\1001-en-us.wav" text="Welcome, please select the button on the screen" />
+  </event>
+  <event id="1002" defaultLanguageId="zh-cn">
+    <voice languageId="zh-cn" file="audio\1002-zh-cn.wav" text="谢谢使用" />
+    <voice languageId="en-us" file="audio\1002-en-us.wav" text="thank you for using" />
+  </event>
+  <event id="1003" defaultLanguageId="zh-cn">
+    <voice languageId="zh-cn" file="audio\1003-zh-cn.wav" text="站员操作中，请稍后" />
+    <voice languageId="en-us" file="audio\1003-en-us.wav" text="Now is staff time" />
+  </event>
+  <event id="1004" defaultLanguageId="zh-cn">
+    <voice languageId="zh-cn" file="audio\1004-zh-cn.wav" text="请投入现金" />
+    <voice languageId="en-us" file="audio\1004-en-us.wav" text="Please insert cash" />
+  </event>
+  <event id="1005" defaultLanguageId="zh-cn">
+    <voice languageId="zh-cn" file="audio\1005-zh-cn.wav" text="请插入充值卡" />
+    <voice languageId="en-us" file="audio\1005-en-us.wav" text="Please insert ticket" />
+  </event>
+  <event id="1006" defaultLanguageId="zh-cn">
+    <voice languageId="zh-cn" file="audio\1006-zh-cn.wav" text="该卡不能用, 请到窗口处理" />
+    <voice languageId="en-us" file="audio\1006-en-us.wav" text="The card can not be used, go to the station staff for help" />
+  </event>
+  <event id="1007" defaultLanguageId="zh-cn">
+    <voice languageId="zh-cn" file="audio\1007-zh-cn.wav" text="警报" />
+    <voice languageId="en-us" file="audio\1007-en-us.wav" text="Alarm" />
+  </event>
+</tts>

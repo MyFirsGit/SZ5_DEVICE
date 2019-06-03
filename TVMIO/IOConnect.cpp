@@ -1,0 +1,79 @@
+//#include "stdafx.h"
+//#include "IOCommand.h"
+//#include "IOException.h"
+//
+//#ifdef _DEBUG
+//#define new DEBUG_NEW
+//#undef THIS_FILE
+//static char THIS_FILE[] = __FILE__;
+//#endif
+//
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief    　构造函数
+//
+//@param      (i)IOTRS_CONNECT_PARAM connectParam
+//
+//@retval     无
+//
+//@exception  无
+//*/
+////////////////////////////////////////////////////////////////////////////
+//CIOConnect::CIOConnect(IOTRS_CONNECT_PARAM connectParam)
+//{
+//	memset(&this->m_connectParam, 0, sizeof(IOTRS_CONNECT_PARAM));
+//	memcpy(&this->m_connectParam, &connectParam, sizeof(IOTRS_CONNECT_PARAM));
+//}
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief      析构函数
+//
+//@param      (i)无
+//
+//@retval     无
+//
+//@exception  无
+//*/
+////////////////////////////////////////////////////////////////////////////
+//CIOConnect::~CIOConnect(void)
+//{
+//}
+//
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       打开串口
+//
+//@param     无
+//
+//@retval      int   0:成功  非0:失败
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+//long CIOConnect::ConnectFunction()
+//{
+//	IOTRS_RESULT lRet = 0;
+//	lRet = IOTrs_Open(&m_hTVMIO,&m_connectParam);
+//	if(lRet != IOTRS_RES_OK){
+//		lRet = CIOException::ERROR_IO_OPEN;
+//	}
+//	return lRet;
+//}
+//
+////////////////////////////////////////////////////////////////////////////
+///**
+//@brief       执行命令
+//
+//@param     无
+//
+//@retval      long    0:成功   非0 : 失败
+//
+//@exception   无
+//*/
+////////////////////////////////////////////////////////////////////////////
+//long CIOConnect::ExecuteCommand(void)
+//{
+//	long lRet= this->ConnectFunction();
+//	this->OnComplete(lRet);
+//	return lRet;
+//}

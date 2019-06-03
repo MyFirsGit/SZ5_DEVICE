@@ -1,0 +1,6 @@
+; CParameterAPI.def : Declares the module parameters for the DLL.
+
+LIBRARY      "COMMParameter"
+
+EXPORTS
+    ; Explicit exports can go here

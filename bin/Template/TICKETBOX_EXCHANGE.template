@@ -1,0 +1,18 @@
+           票箱更换凭证
+           
+更换前
+票箱A编号  ： {TICKETBOXA_ID_BEFORE}
+票箱A张数  ： {TICKETBOXA_COUNT_BEFORE}
+票箱B编号  ： {TICKETBOXB_ID_BEFORE}
+票箱B张数  ： {TICKETBOXB_COUNT_BEFORE}
+
+更换后
+票箱A编号  ： {TICKETBOXA_ID_AFTER}
+票箱A张数  ： {TICKETBOXA_COUNT_AFTER}
+票箱B编号  ： {TICKETBOXB_ID_AFTER}
+票箱B张数  ： {TICKETBOXB_COUNT_AFTER}
+
+交易时间  ： {TRANS_TIME}
+车站名称  ： {STATION_NAME}
+设备编号  ： {DEVICE_CODE}
+操作员ID  ： {USER_ID}

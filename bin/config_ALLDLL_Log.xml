@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--********************************************************************************************-->
+<!--                Configuration file for Gate Application                                     -->
+<!--********************************************************************************************-->
+
+<!--********************************************************************************************-->
+<!-- Note: Please don't add comments before the xml version line, otherwise it 
+           will casue xml parsing error                                                         -->
+<!--********************************************************************************************-->
+
+<!-- Start of xml document -->
+<config>
+    <!-- TIM related configuration -->
+    <module name="TIM_LogInfo">
+    	<item name="LogOutOption">1</item>      	     	<!-- Log Out Option-->
+        														<!-- 0  : close log-->
+        														<!-- 1  : Output the file-->
+        														<!-- 2  : Output Standard-->
+        														
+    
+        <item name="TraceLog">E:\log\</item>         		<!-- Log Output Directory -->  
+        														<!-- WARNING!!! The Directorypath must exist,otherwise the log will not be output -->
+        														<!-- Max Size of Characters is 127 -->
+        														<!-- For example : E:\log\-->
+        													
+        <item name="LogFileName">THCom_%YYYY%MM%DD.log</item>			<!-- Log filename-->
+        												    	<!-- WARNING!!! if LogFileName is NULL ,the serial communication log is not output -->
+        														<!-- Max Size of Characters is 127 -->
+													        	<!-- %YYYY:Current year -->
+													        	<!-- %MM:Cureent month -->
+													        	<!-- %DD:Current day  -->
+													        	<!-- For example %YYYY%MM%DD = 20161210 -->
+													        	<!-- Common Values : THCom_%YYYY%MM%DD -->
+        														
+        <item name="LogIncSNSize">5</item>      	     	<!-- When the file is larger than the value,create new file ,The serial number of the file will increase-->
+																<!-- WARNING!!! when "LogFileName" have "%SSSS", the value is effective -->        													
+        														<!-- WARNING!!! The Value Unit is M = 1024*1024 bytes  -->
+        														<!-- WARNING!!! If Value is less than 1 ,for example 0.01 than the value is 1 by setting-->        														
+        														<!-- For example 5 ,when the file size is large than 5M ,create new file -->      														
+        														
+       	<item name="LogIsCloseFreqOut">0</item>      	    <!-- Close frequency Out-->
+        														<!-- 1  : close frequency Out-->
+        														<!-- 0  : not close frequency Out--> 									
+    </module>
+	<module name="TAM_LogInfo">
+    	<item name="LogOutOption">1</item>      	     	<!-- Log Out Option-->
+        														<!-- 0  : close log-->
+        														<!-- 1  : Output the file-->
+        														<!-- 2  : Output Standard-->
+        														
+    
+        <item name="TraceLog">/work/afc/log/</item>         		<!-- Log Output Directory -->  
+        														<!-- WARNING!!! The Directorypath must exist,otherwise the log will not be output -->
+        														<!-- Max Size of Characters is 127 -->
+        														<!-- For example : E:\log\-->
+        													
+        <item name="LogFileName">LGT_TAM_%SSSS</item>			<!-- Log filename-->
+        												    	<!-- WARNING!!! if LogFileName is NULL ,the serial communication log is not output -->
+        														<!-- Max Size of Characters is 127 -->
+													        	<!-- %YYYY:Current year -->
+													        	<!-- %MM:Cureent month -->
+													        	<!-- %DD:Current day  -->
+													        	<!-- For example %YYYY%MM%DD = 20161210 -->
+													        	<!-- Common Values : THCom_%YYYY%MM%DD -->
+        														
+        <item name="LogIncSNSize">5</item>      	     	<!-- When the file is larger than the value,create new file ,The serial number of the file will increase-->
+																<!-- WARNING!!! when "LogFileName" have "%SSSS", the value is effective -->        													
+        														<!-- WARNING!!! The Value Unit is M = 1024*1024 bytes  -->
+        														<!-- WARNING!!! If Value is less than 1 ,for example 0.01 than the value is 1 by setting-->        														
+        														<!-- For example 5 ,when the file size is large than 5M ,create new file -->      														
+        														
+       	<item name="LogIsCloseFreqOut">0</item>      	    <!-- Close frequency Out-->
+        														<!-- 1  : close frequency Out-->
+        														<!-- 0  : not close frequency Out--> 									
+    </module> 
+	<module name="AGIO_LogInfo">
+    	<item name="LogOutOption">1</item>      	     	<!-- Log Out Option-->
+        														<!-- 0  : close log-->
+        														<!-- 1  : Output the file-->
+        														<!-- 2  : Output Standard-->
+        														
+    
+        <item name="TraceLog">/work/afc/log/</item>         		<!-- Log Output Directory -->  
+        														<!-- WARNING!!! The Directorypath must exist,otherwise the log will not be output -->
+        														<!-- Max Size of Characters is 127 -->
+        														<!-- For example : E:\log\-->
+        													
+        <item name="LogFileName">LGT_AGIO_%SSSS</item>			<!-- Log filename-->
+        												    	<!-- WARNING!!! if LogFileName is NULL ,the serial communication log is not output -->
+        														<!-- Max Size of Characters is 127 -->
+													        	<!-- %YYYY:Current year -->
+													        	<!-- %MM:Cureent month -->
+													        	<!-- %DD:Current day  -->
+													        	<!-- For example %YYYY%MM%DD = 20161210 -->
+													        	<!-- Common Values : THCom_%YYYY%MM%DD -->
+        														
+        <item name="LogIncSNSize">5</item>      	     	<!-- When the file is larger than the value,create new file ,The serial number of the file will increase-->
+																<!-- WARNING!!! when "LogFileName" have "%SSSS", the value is effective -->        													
+        														<!-- WARNING!!! The Value Unit is M = 1024*1024 bytes  -->
+        														<!-- WARNING!!! If Value is less than 1 ,for example 0.01 than the value is 1 by setting-->        														
+        														<!-- For example 5 ,when the file size is large than 5M ,create new file -->      														
+        														
+       	<item name="LogIsCloseFreqOut">0</item>      	    <!-- Close frequency Out-->
+        														<!-- 1  : close frequency Out-->
+        														<!-- 0  : not close frequency Out--> 									
+    </module>    
+</config> <!-- End of xml document -->
+

@@ -1,0 +1,19 @@
+             退款凭证{REFUND_CARD_TITLE}
+             退款申请凭证{REFUND_APPLY_TITLE}
+
+-------------------------------------
+
+用户卡号  ： {CARD_NUM}
+车票种类  ： {TICKET_TYPE}
+有效期限  ： {VALID_DATE}
+证件类型  ： {CERTIFICATE_TYPE}
+证件编号  ： {CERTIFICATE_NUM}
+挂失单号  ： {SUSPEND_BILL_NUM}
+退款押金  ： {CARD_DEPOSIT}
+退款余额  ： {CARD_BALANCE}
+退款总额  ： {REFUND_AMOUNT}
+收据编号  ： {BILL_NUM}
+交易时间  ： {TRANS_TIME}
+车站名称  ： {STATION_NAME}
+设备编号  ： {DEVICE_CODE}
+操作员ID  ： {USER_ID}

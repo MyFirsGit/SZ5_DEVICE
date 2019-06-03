@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f9974e46-82fd-4d25-bb25-3195972f47e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7badcd9c-d033-434f-b512-dce8cf7583d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exception">
+      <UniqueIdentifier>{adafdf35-0799-4c68-a12b-ad33e0bea982}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RWCommands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RWException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="RWHardwareException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="TWException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="TWHardwareException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RWException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="RWHardwareException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="TWException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="TWHardwareException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="CommBase.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DCR4000Comm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWCOMLIB_DEF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWCOMLIBExp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RWCommands.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

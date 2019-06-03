@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 广告文件 -->
+<Advertisement>
+	<!-- 广告对象1 ValidateTime格式:YYYYMMDDHHMM; ResourcPath为广告资源文件保存的相对路径-->
+	<Advertisement_Object AdvertisementName="adv1" SerialNo="2" ValidateTime="201401010001" ResourcPath="ADV\\ADV1\\">
+		<!--文字广告 DisplayMode:静止显示:1; 左右滚动：2,上下滚动:3，  Color:RGB的值; "|"为换行符-->
+		<Advertisement_Text SerialNo="2">
+			<!--文字对象  -->
+			<Text_Object SerialNo="1" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨1" DisplayMode="1" Speed="2"/>
+			<Text_Object SerialNo="3" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨2" DisplayMode="2" Speed="2"/>
+			<Text_Object SerialNo="4" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨3" DisplayMode="3" Speed="2"/>
+			<Text_Object SerialNo="2" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨4" DisplayMode="4" Speed="2"/>
+		</Advertisement_Text>
+		<!-- 图片广告 -->
+		<Advertisement_Picture SerialNo="1">
+			<!--图片对象  -->
+			<Picture_Object SerialNo="1" TimeLength="30" FilePathName=".\\res\\ADV\\nbaduikang1.jpg"/>				
+			<Picture_Object SerialNo="3" TimeLength="30" FilePathName=".\\res\\ADV\\nbaduikang2.jpg"/>	
+			<Picture_Object SerialNo="2" TimeLength="30" FilePathName=".\\res\\ADV\\4.gif"/>
+		</Advertisement_Picture>	
+		<!-- 视频广告 -->
+		<Advertisement_Video SerialNo="3">
+			<!--视频对象  -->
+			<Video_Object SerialNo="1" FilePathName="Video.MP4"/>	
+			<Video_Object SerialNo="2" FilePathName="Video.MP4"/>	
+		</Advertisement_Video>		
+	</Advertisement_Object>
+  <!-- 广告对象2 ValidateTime格式:YYYYMMDDHHMM; ResourcPath为广告资源文件保存的相对路径-->
+	<Advertisement_Object AdvertisementName="adv2" SerialNo="1" ValidateTime="201812302359" ResourcPath="ADV\\ADV2\\">
+		<!--文字广告 DisplayMode:静止显示:1; 左右滚动：2,上下滚动:3，  Color:RGB的值; "|"为换行符-->
+		<Advertisement_Text SerialNo="">
+			<!--文字对象  -->
+			<Text_Object SerialNo="2" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨3" DisplayMode="1" Speed="2"/>
+			<Text_Object SerialNo="3" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨2" DisplayMode="2" Speed="2"/>
+			<Text_Object SerialNo="1" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨1" DisplayMode="3" Speed="2"/>
+		</Advertisement_Text>
+		<!-- 图片广告 -->
+		<Advertisement_Picture SerialNo="1">
+			<!--图片对象  -->
+			<Picture_Object SerialNo="1" TimeLength="30" FilePathName=".\\res\\ADV\\Zhengzhou1.jpg"/>				
+			<Picture_Object SerialNo="3" TimeLength="60" FilePathName=".\\res\\ADV\\Zhengzhou3.jpg"/>	
+			<Picture_Object SerialNo="2" TimeLength="30" FilePathName=".\\res\\ADV\\Zhengzhou2.jpg"/>
+		</Advertisement_Picture>
+		<!-- 视频广告 -->
+    <Advertisement_Video SerialNo="3">
+			<!--视频对象  -->
+			<Video_Object SerialNo="1" FilePathName="Video.MP4"/>	
+			<Video_Object SerialNo="2" FilePathName="Video.MP4"/>	
+		</Advertisement_Video>
+    </Advertisement_Object>
+	<!-- 广告对象3 ValidateTime格式:YYYYMMDDHHMM; ResourcPath为广告资源文件保存的相对路径-->
+	<Advertisement_Object AdvertisementName="adv3" SerialNo="3" ValidateTime="201412101830" ResourcPath="ADV\\ADV3\\">
+		<!--文字广告 DisplayMode:静止显示:1; 左右滚动：2,上下滚动:3，  Color:RGB的值; "|"为换行符-->
+		<Advertisement_Text SerialNo="2">
+			<!--文字对象  -->
+			<Text_Object SerialNo="1" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨1" DisplayMode="1" Speed="2"/>
+			<Text_Object SerialNo="3" Font="黑体" Size="300" Color="6763776" TimeLength="30" Content="欢迎光临|澳门轻轨2" DisplayMode="2" Speed="2"/>
+			<Text_Object SerialNo="4" Font="黑体" Size="300" Color="6763776" TimeLength="40" Content="欢迎光临|澳门轻轨3" DisplayMode="3" Speed="2"/>
+			<Text_Object SerialNo="2" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨4" DisplayMode="4" Speed="2"/>
+			<Text_Object SerialNo="5" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨5" DisplayMode="5" Speed="2"/>
+		</Advertisement_Text>
+		<!-- 图片广告 -->
+		<Advertisement_Picture SerialNo="1">
+			<!--图片对象  -->
+			<Picture_Object SerialNo="1" TimeLength="30" FilePathName=".\\res\\ADV\\nbaduikang5.jpg"/>				
+			<Picture_Object SerialNo="3" TimeLength="30" FilePathName=".\\res\\ADV\\nbaduikang6.jpg"/>	
+			<Picture_Object SerialNo="2" TimeLength="30" FilePathName=".\\res\\ADV\\nbaduikang7.jpg"/>
+		</Advertisement_Picture>
+		<!-- 视频广告 -->
+		<Advertisement_Video SerialNo="3">
+			<!--视频对象  -->
+			<Video_Object SerialNo="1" FilePathName="Video.MP4"/>	
+			<Video_Object SerialNo="2" FilePathName="Video.MP4"/>	
+		</Advertisement_Video>		
+	</Advertisement_Object>
+	<!-- 广告对象4 ValidateTime格式:YYYYMMDDHHMM; ResourcPath为广告资源文件保存的相对路径-->
+	<Advertisement_Object AdvertisementName="adv4" SerialNo="4" ValidateTime="201412101830" ResourcPath="ADV\\ADV4\\">
+		<!--文字广告 DisplayMode:静止显示:1; 左右滚动：2,上下滚动:3，  Color:RGB的值; "|"为换行符-->
+		<Advertisement_Text SerialNo="2">
+			<!--文字对象  -->
+			<Text_Object SerialNo="1" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨1" DisplayMode="1" Speed="2"/>
+			<Text_Object SerialNo="3" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨2" DisplayMode="2" Speed="2"/>
+			<Text_Object SerialNo="4" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨3" DisplayMode="3" Speed="2"/>
+			<Text_Object SerialNo="2" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨4" DisplayMode="4" Speed="2"/>
+			<Text_Object SerialNo="5" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨5" DisplayMode="2" Speed="2"/>
+			<Text_Object SerialNo="6" Font="黑体" Size="300" Color="6763776" TimeLength="20" Content="欢迎光临|澳门轻轨6" DisplayMode="3" Speed="2"/>
+		</Advertisement_Text>
+		<!-- 图片广告 -->
+		<Advertisement_Picture SerialNo="1">
+			<!--图片对象  -->
+			<Picture_Object SerialNo="1" TimeLength="30" FilePathName=".\\res\\ADV\\nbaduikang8.jpg"/>				
+			<Picture_Object SerialNo="3" TimeLength="60" FilePathName=".\\res\\ADV\\nbaduikang10.jpg"/>	
+			<Picture_Object SerialNo="2" TimeLength="30" FilePathName=".\\res\\ADV\\nbaduikang9.jpg"/>
+		</Advertisement_Picture>
+		<!-- 视频广告 -->
+		<Advertisement_Video SerialNo="3">
+			<!--视频对象  -->
+			<Video_Object SerialNo="1" FilePathName="Video.MP4"/>	
+			<Video_Object SerialNo="2" FilePathName="Video.MP4"/>	
+		</Advertisement_Video>		
+	</Advertisement_Object>
+	<!-- 广告对象... -->
+</Advertisement>

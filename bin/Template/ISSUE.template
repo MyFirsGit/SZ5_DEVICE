@@ -1,0 +1,14 @@
+             发售凭证
+
+-------------------------------------
+
+用户卡号  ： {CARD_NUM}
+车票种类  ： {TICKET_TYPE}
+发卡押金  ： {TICKET_DEPOSIT}
+有效乘次  ： {VALID_RIDES}
+有效期限  ： {VALID_DATE}
+售票金额  ： {ISSUE_AMOUNT}
+交易时间  ： {TRANS_TIME}
+车站名称  ： {STATION_NAME}
+设备编号  ： {DEVICE_CODE}
+操作员ID  ： {USER_ID}

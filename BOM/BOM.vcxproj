@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C913E206-8FAC-446B-8E7A-72A1A72166C9}</ProjectGuid>
+    <RootNamespace>BOM</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../Include/Core;../Include/Common;../Include/Parameter;../Include/Printer;../Include/SC;../Include/TxnData;../Include/FTP;../Include/ACCAudit;../Include/RW;../Include/RWLib;../Include/USB;../Include/SNTP;../Include/SCAudit;../Include/TH;../Include/THLib;../Include/LPT;../Include/UPS;../Include/TxnAudit;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_PRINT_SIMULATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+    <Link>
+      <AdditionalDependencies>Msimg32.lib;Winmm.lib;Core.lib;Common.lib;FTP.lib;Printer.lib;Parameter.lib;TxnData.lib;SC.lib;USB.lib;ACCAudit.lib;SNTP.lib;SCAudit.lib;RW.lib;RWLib.lib;TH.lib;THLib.lib;LPT.lib;UPS.lib;TxnAudit.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>
+      </ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>../Include;../commCore;../comm;../commParameter;../Printer;../commSC;../commTxnData;../commFTP;../commACCAudit;../commRW;../commRWLib;../commUSB;../commSNTP;../SCAudit;../COMMTH;../COMMTHUpdateLib;../COMMTHLib;../commLPT;../UPS;../TxnAudit;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>commCore.lib;Comm.lib;commFTP.lib;Printer.lib;commParameter.lib;commTxnData.lib;commSC.lib;commUSB.lib;commACCAudit.lib;commSNTP.lib;SCAudit.lib;commRW.lib;commRWLib.lib;COMMTH.lib;COMMTHLib.lib;COMMTHUpdateLib.lib;commLPT.lib;UPS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="res\bg_Group.bmp" />
+    <None Include="res\bg_menu.bmp" />
+    <None Include="res\BOM.ico" />
+    <None Include="res\BOM.rc2" />
+    <None Include="res\btnBack.bmp" />
+    <None Include="res\btnBackDown.bmp" />
+    <None Include="res\btnFocus.bmp" />
+    <None Include="res\btnNormal.bmp" />
+    <None Include="res\btnNormalDown.bmp" />
+    <None Include="res\btnNormalSel.bmp" />
+    <None Include="res\btnOk.bmp" />
+    <None Include="res\btnOkDown.bmp" />
+    <None Include="res\logo.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BOM.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppSession.cpp" />
+    <ClCompile Include="GlobalParameter.cpp" />
+    <ClCompile Include="mlcEncrypt.cpp" />
+    <ClCompile Include="LPTHelper.cpp" />
+    <ClCompile Include="PRTHelper.cpp">
+      <RuntimeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ClCompile Include="RWHelper.cpp" />
+    <ClCompile Include="THHelper.cpp" />
+    <ClCompile Include="TWHelper.cpp" />
+    <ClCompile Include="UPSHelper.cpp" />
+    <ClCompile Include="AuditHelper.cpp" />
+    <ClCompile Include="FTPHelper.cpp" />
+    <ClCompile Include="LogHelper.cpp" />
+    <ClCompile Include="ParamHelper.cpp" />
+    <ClCompile Include="ShieldKeyHelper.cpp" />
+    <ClCompile Include="SNTPHelper.cpp" />
+    <ClCompile Include="TemplateHelper.cpp" />
+    <ClCompile Include="TicketHelper.cpp" />
+    <ClCompile Include="UpgradeHelper.cpp" />
+    <ClCompile Include="CPUCardInfo.cpp" />
+    <ClCompile Include="ECTCardInfo.cpp" />
+    <ClCompile Include="ULCardInfo.cpp" />
+    <ClCompile Include="FunctionInfo.cpp" />
+    <ClCompile Include="GuideInfo.cpp" />
+    <ClCompile Include="TpuErrorInfo.cpp" />
+    <ClCompile Include="VersionInfo.cpp" />
+    <ClCompile Include="BOMDef.cpp" />
+    <ClCompile Include="ExceptionMgr.cpp" />
+    <ClCompile Include="ServiceMgr.cpp" />
+    <ClCompile Include="BitmapManager.cpp" />
+    <ClCompile Include="BOMForeService.cpp" />
+    <ClCompile Include="ControlManager.cpp" />
+    <ClCompile Include="CursorMgr.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MainFrmRec.cpp" />
+    <ClCompile Include="MainSvc.cpp" />
+    <ClCompile Include="MenuMgr.cpp" />
+    <ClCompile Include="RootSvc.cpp" />
+    <ClCompile Include="ShortCutKeyManager.cpp" />
+    <ClCompile Include="ButtonGroup.cpp" />
+    <ClCompile Include="CompositGroupBox.cpp" />
+    <ClCompile Include="GEdit.cpp" />
+    <ClCompile Include="GroupBox.cpp" />
+    <ClCompile Include="GStatic.cpp" />
+    <ClCompile Include="Lable.cpp" />
+    <ClCompile Include="Panel.cpp" />
+    <ClCompile Include="ReceptionStaticInfo.cpp" />
+    <ClCompile Include="Table.cpp" />
+    <ClCompile Include="XButton.cpp" />
+    <ClCompile Include="GridCell.cpp" />
+    <ClCompile Include="GridCellBase.cpp" />
+    <ClCompile Include="GridCellCheck.cpp" />
+    <ClCompile Include="GridCellCombo.cpp" />
+    <ClCompile Include="GridCellDateTime.cpp" />
+    <ClCompile Include="GridCellNumeric.cpp" />
+    <ClCompile Include="GridCtrl.cpp" />
+    <ClCompile Include="GridDropTarget.cpp" />
+    <ClCompile Include="GridURLCell.cpp" />
+    <ClCompile Include="InPlaceEdit.cpp" />
+    <ClCompile Include="TitleTip.cpp" />
+    <ClCompile Include="BaseDlg.cpp" />
+    <ClCompile Include="BOMDialogFlow.cpp" />
+    <ClCompile Include="ChildView.cpp" />
+    <ClCompile Include="ChildViewRec.cpp" />
+    <ClCompile Include="FunctionDlg.cpp" />
+    <ClCompile Include="GuideDlg.cpp" />
+    <ClCompile Include="GuideReceptionDlg.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="LogoDlg.cpp" />
+    <ClCompile Include="MenuDlg.cpp" />
+    <ClCompile Include="MessageBox.cpp" />
+    <ClCompile Include="OperationDlg.cpp" />
+    <ClCompile Include="OutOfReceptionDlg.cpp" />
+    <ClCompile Include="ReceptionDlg.cpp" />
+    <ClCompile Include="ReceptionHeadDlg.cpp" />
+    <ClCompile Include="StatusDlg.cpp" />
+    <ClCompile Include="WaitingOfficeDlg.cpp" />
+    <ClCompile Include="WelcomeDlg.cpp" />
+    <ClCompile Include="WelcomeReceptionDlg.cpp" />
+    <ClCompile Include="InitDlg.cpp" />
+    <ClCompile Include="InitSvc.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="LoginSvc.cpp" />
+    <ClCompile Include="LogoffHelper.cpp" />
+    <ClCompile Include="MoneyBoxTestMaintainDlg.cpp" />
+    <ClCompile Include="MoneyBoxTestSvc.cpp" />
+    <ClCompile Include="NetworkItemMaintainDlg.cpp" />
+    <ClCompile Include="NetworkTestSvc.cpp" />
+    <ClCompile Include="PrinterTestMaintainDlg.cpp" />
+    <ClCompile Include="PrinterTestSvc.cpp" />
+    <ClCompile Include="CardReadWriteMachineTestMaintainDlg.cpp" />
+    <ClCompile Include="RWTestSvc.cpp" />
+    <ClCompile Include="UPSInfoMaintainDlg.cpp" />
+    <ClCompile Include="UPSInfoSvc.cpp" />
+    <ClCompile Include="THTestMaintainDlg.cpp" />
+    <ClCompile Include="THTestSvc.cpp" />
+    <ClCompile Include="SystemSetSvc.cpp" />
+    <ClCompile Include="StationSetMaintainDlg.cpp" />
+    <ClCompile Include="StationSetSvc.cpp" />
+    <ClCompile Include="DeviceModeSwitchDlg.cpp" />
+    <ClCompile Include="DeviceModeSwitchSvc.cpp" />
+    <ClCompile Include="TimeSetBaseOfficeDlg.cpp" />
+    <ClCompile Include="TimeSetSvc.cpp" />
+    <ClCompile Include="CommunicationSetMaintainDlg.cpp" />
+    <ClCompile Include="CommunicationSetSvc.cpp" />
+    <ClCompile Include="UDSNSetMaintainDlg.cpp" />
+    <ClCompile Include="UDSNSetSvc.cpp" />
+    <ClCompile Include="RFIDSetBaseOfficeDlg.cpp" />
+    <ClCompile Include="RFIDSetSvc.cpp" />
+    <ClCompile Include="DataInputSelectMaintainDlg.cpp" />
+    <ClCompile Include="DataInputSvc.cpp" />
+    <ClCompile Include="DataOutputSelectMaintainDlg.cpp" />
+    <ClCompile Include="DataOutputSvc.cpp" />
+    <ClCompile Include="RemoveExceptionDlg.cpp" />
+    <ClCompile Include="RemoveExceptionSvc.cpp" />
+    <ClCompile Include="IssueACCDlg.cpp" />
+    <ClCompile Include="IssueACCReceptionDlg.cpp" />
+    <ClCompile Include="IssueResultDlg.cpp" />
+    <ClCompile Include="IssueSvc.cpp" />
+    <ClCompile Include="ChargeBaseOfficeDlg.cpp" />
+    <ClCompile Include="ChargeReceptionDlg.cpp" />
+    <ClCompile Include="ChargeSvc.cpp" />
+    <ClCompile Include="AdjustBaseOfficeDlg.cpp" />
+    <ClCompile Include="AdjustReceptionDlg.cpp" />
+    <ClCompile Include="AdjustSvc.cpp" />
+    <ClCompile Include="AnalyzeBaseOfficeDlg.cpp" />
+    <ClCompile Include="AnalyzeConfirmReceptionDlg.cpp" />
+    <ClCompile Include="AnalyzeSvc.cpp" />
+    <ClCompile Include="ARefundBaseOfficeDlg.cpp" />
+    <ClCompile Include="ARefundReceptionDlg.cpp" />
+    <ClCompile Include="RefundApplyOfficeDlg.cpp" />
+    <ClCompile Include="RefundApplySvc.cpp" />
+    <ClCompile Include="RefundQueryOfficeDlg.cpp" />
+    <ClCompile Include="RefundBaseOfficeDlg.cpp" />
+    <ClCompile Include="RefundReceptionDlg.cpp" />
+    <ClCompile Include="RefundSvc.cpp" />
+    <ClCompile Include="CounteractConfirmOfficeDlg.cpp" />
+    <ClCompile Include="CounteractSvc.cpp" />
+    <ClCompile Include="OthersSvc.cpp" />
+    <ClCompile Include="CTTVMRefund.cpp" />
+    <ClCompile Include="TVMFailureRefundBaseOfficeDlg.cpp" />
+    <ClCompile Include="TVMFailureRefundReceptionDlg.cpp" />
+    <ClCompile Include="TVMFailureRefundSvc.cpp" />
+    <ClCompile Include="NoBusinessIncomeBaseOfficeDlg.cpp" />
+    <ClCompile Include="NoBusinessIncomeSvc.cpp" />
+    <ClCompile Include="SignCardApplyBaseOfficeDlg.cpp" />
+    <ClCompile Include="SignCardApplyCheckOfficeDlg.cpp" />
+    <ClCompile Include="SignCardApplyOverOfficeDlg.cpp" />
+    <ClCompile Include="SignCardApplySvc.cpp" />
+    <ClCompile Include="SignCardReportLossBaseOfficeDlg.cpp" />
+    <ClCompile Include="SignCardReportLossOverOfficeDlg.cpp" />
+    <ClCompile Include="SignCardReportLossSvc.cpp" />
+    <ClCompile Include="CardSuspendAndResumeBaseOfficeDlg.cpp" />
+    <ClCompile Include="CardSuspendAndResumeSvc.cpp" />
+    <ClCompile Include="CSaleStaticBaseOfficeDlg.cpp" />
+    <ClCompile Include="CSaleStaticSvc.cpp" />
+    <ClCompile Include="ExchangeBackupDlg.cpp" />
+    <ClCompile Include="ExchangeBaseOfficeDlg.cpp" />
+    <ClCompile Include="ExchangeReceptionDlg.cpp" />
+    <ClCompile Include="ExchangeSvc.cpp" />
+    <ClCompile Include="TicketBoxExchangeSvc.cpp" />
+    <ClCompile Include="TicketBoxInfoDlg.cpp" />
+    <ClCompile Include="THModeSetMaintainDlg.cpp" />
+    <ClCompile Include="THModeSetSvc.cpp" />
+    <ClCompile Include="DeferOfficeDlg.cpp" />
+    <ClCompile Include="DeferReceptionDlg.cpp" />
+    <ClCompile Include="DeferSvc.cpp" />
+    <ClCompile Include="RefreshBaseOfficeDlg.cpp" />
+    <ClCompile Include="RefreshReceptionDlg.cpp" />
+    <ClCompile Include="RefreshSvc.cpp" />
+    <ClCompile Include="BomStatusMgr.cpp" />
+    <ClCompile Include="ParamMsg.cpp" />
+    <ClCompile Include="SCMessageMakeHelper.cpp" />
+    <ClCompile Include="SCMessageParseHelper.cpp" />
+    <ClCompile Include="ServerClientSvc.cpp" />
+    <ClCompile Include="BusinessTranslateSvc.cpp" />
+    <ClCompile Include="TranscationTranslateSvc.cpp" />
+    <ClCompile Include="EventDataSvc.cpp" />
+    <ClCompile Include="CloseOperationSequence.cpp" />
+    <ClCompile Include="ConnectSequence.cpp" />
+    <ClCompile Include="ParameterSyncSequence.cpp" />
+    <ClCompile Include="LPTMonitorSvc.cpp" />
+    <ClCompile Include="MonitorSvc.cpp" />
+    <ClCompile Include="RWMonitorSvc.cpp" />
+    <ClCompile Include="THMonitorSvc.cpp" />
+    <ClCompile Include="TWMonitorSvc.cpp" />
+    <ClCompile Include="UPSMonitorSvc.cpp" />
+    <ClCompile Include="ConfirmAliveSvc.cpp" />
+    <ClCompile Include="BOM.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="CLOGLoginAndLogoff.cpp" />
+    <ClCompile Include="StaffOperationLog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppSession.h" />
+    <ClInclude Include="GlobalParameter.h" />
+    <ClInclude Include="mlcEncrypt.h" />
+    <ClInclude Include="LPTHelper.h" />
+    <ClInclude Include="PRTHelper.h" />
+    <ClInclude Include="RWHelper.h" />
+    <ClInclude Include="THHelper.h" />
+    <ClInclude Include="TWHelper.h" />
+    <ClInclude Include="UPSHelper.h" />
+    <ClInclude Include="AuditHelper.h" />
+    <ClInclude Include="FTPHelper.h" />
+    <ClInclude Include="LogHelper.h" />
+    <ClInclude Include="ParamHelper.h" />
+    <ClInclude Include="ShieldKeyHelper.h" />
+    <ClInclude Include="SNTPHelper.h" />
+    <ClInclude Include="TemplateHelper.h" />
+    <ClInclude Include="TicketHelper.h" />
+    <ClInclude Include="UpgradeHelper.h" />
+    <ClInclude Include="CPUCardInfo.h" />
+    <ClInclude Include="ECTCardInfo.h" />
+    <ClInclude Include="ULCardInfo.h" />
+    <ClInclude Include="FunctionInfo.h" />
+    <ClInclude Include="GuideInfo.h" />
+    <ClInclude Include="TpuErrorInfo.h" />
+    <ClInclude Include="VersionInfo.h" />
+    <ClInclude Include="BOMDef.h" />
+    <ClInclude Include="MessageIDDefinition.h" />
+    <ClInclude Include="ServiceDefinition.h" />
+    <ClInclude Include="SvcDef.h" />
+    <ClInclude Include="UIDefinition.h" />
+    <ClInclude Include="ExceptionMgr.h" />
+    <ClInclude Include="RootSvc.h" />
+    <ClInclude Include="ServiceMgr.h" />
+    <ClInclude Include="BitmapManager.h" />
+    <ClInclude Include="BOMForeService.h" />
+    <ClInclude Include="ControlManager.h" />
+    <ClInclude Include="CursorMgr.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MainFrmRec.h" />
+    <ClInclude Include="MainSvc.h" />
+    <ClInclude Include="MenuMgr.h" />
+    <ClInclude Include="ShortCutKeyManager.h" />
+    <ClInclude Include="ButtonGroup.h" />
+    <ClInclude Include="CompositGroupBox.h" />
+    <ClInclude Include="GEdit.h" />
+    <ClInclude Include="GroupBox.h" />
+    <ClInclude Include="GStatic.h" />
+    <ClInclude Include="Lable.h" />
+    <ClInclude Include="Panel.h" />
+    <ClInclude Include="ReceptionStaticInfo.h" />
+    <ClInclude Include="Table.h" />
+    <ClInclude Include="XButton.h" />
+    <ClInclude Include="CellRange.h" />
+    <ClInclude Include="GridCell.h" />
+    <ClInclude Include="GridCellBase.h" />
+    <ClInclude Include="GridCellCheck.h" />
+    <ClInclude Include="GridCellCombo.h" />
+    <ClInclude Include="GridCellDateTime.h" />
+    <ClInclude Include="GridCellNumeric.h" />
+    <ClInclude Include="GridCtrl.h" />
+    <ClInclude Include="GridDropTarget.h" />
+    <ClInclude Include="GridURLCell.h" />
+    <ClInclude Include="InPlaceEdit.h" />
+    <ClInclude Include="MemDC.h" />
+    <ClInclude Include="TitleTip.h" />
+    <ClInclude Include="BaseDlg.h" />
+    <ClInclude Include="BOMDialogFlow.h" />
+    <ClInclude Include="ChildView.h" />
+    <ClInclude Include="ChildViewRec.h" />
+    <ClInclude Include="FunctionDlg.h" />
+    <ClInclude Include="GuideDlg.h" />
+    <ClInclude Include="GuideReceptionDlg.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="LogoDlg.h" />
+    <ClInclude Include="MenuDlg.h" />
+    <ClInclude Include="MessageBox.h" />
+    <ClInclude Include="OperationDlg.h" />
+    <ClInclude Include="OutOfReceptionDlg.h" />
+    <ClInclude Include="ReceptionDlg.h" />
+    <ClInclude Include="ReceptionHeadDlg.h" />
+    <ClInclude Include="StatusDlg.h" />
+    <ClInclude Include="WaitingOfficeDlg.h" />
+    <ClInclude Include="WelcomeDlg.h" />
+    <ClInclude Include="WelcomeReceptionDlg.h" />
+    <ClInclude Include="InitDlg.h" />
+    <ClInclude Include="InitSvc.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="LoginSvc.h" />
+    <ClInclude Include="LogoffHelper.h" />
+    <ClInclude Include="MoneyBoxTestMaintainDlg.h" />
+    <ClInclude Include="MoneyBoxTestSvc.h" />
+    <ClInclude Include="NetworkItemMaintainDlg.h" />
+    <ClInclude Include="NetworkTestSvc.h" />
+    <ClInclude Include="PrinterTestMaintainDlg.h" />
+    <ClInclude Include="PrinterTestSvc.h" />
+    <ClInclude Include="CardReadWriteMachineTestMaintainDlg.h" />
+    <ClInclude Include="RWTestSvc.h" />
+    <ClInclude Include="UPSInfoMaintainDlg.h" />
+    <ClInclude Include="UPSInfoSvc.h" />
+    <ClInclude Include="THTestMaintainDlg.h" />
+    <ClInclude Include="THTestSvc.h" />
+    <ClInclude Include="SystemSetSvc.h" />
+    <ClInclude Include="StationSetMaintainDlg.h" />
+    <ClInclude Include="StationSetSvc.h" />
+    <ClInclude Include="DeviceModeSwitchDlg.h" />
+    <ClInclude Include="DeviceModeSwitchSvc.h" />
+    <ClInclude Include="TimeSetBaseOfficeDlg.h" />
+    <ClInclude Include="TimeSetSvc.h" />
+    <ClInclude Include="CommunicationSetMaintainDlg.h" />
+    <ClInclude Include="CommunicationSetSvc.h" />
+    <ClInclude Include="UDSNSetMaintainDlg.h" />
+    <ClInclude Include="UDSNSetSvc.h" />
+    <ClInclude Include="RFIDSetBaseOfficeDlg.h" />
+    <ClInclude Include="RFIDSetSvc.h" />
+    <ClInclude Include="DataInputSelectMaintainDlg.h" />
+    <ClInclude Include="DataInputSvc.h" />
+    <ClInclude Include="DataOutputSelectMaintainDlg.h" />
+    <ClInclude Include="DataOutputSvc.h" />
+    <ClInclude Include="RemoveExceptionDlg.h" />
+    <ClInclude Include="RemoveExceptionSvc.h" />
+    <ClInclude Include="IssueACCDlg.h" />
+    <ClInclude Include="IssueACCReceptionDlg.h" />
+    <ClInclude Include="IssueResultDlg.h" />
+    <ClInclude Include="IssueSvc.h" />
+    <ClInclude Include="ChargeBaseOfficeDlg.h" />
+    <ClInclude Include="ChargeReceptionDlg.h" />
+    <ClInclude Include="ChargeSvc.h" />
+    <ClInclude Include="AdjustBaseOfficeDlg.h" />
+    <ClInclude Include="AdjustReceptionDlg.h" />
+    <ClInclude Include="AdjustSvc.h" />
+    <ClInclude Include="AnalyzeBaseOfficeDlg.h" />
+    <ClInclude Include="AnalyzeConfirmReceptionDlg.h" />
+    <ClInclude Include="AnalyzeSvc.h" />
+    <ClInclude Include="ARefundBaseOfficeDlg.h" />
+    <ClInclude Include="ARefundReceptionDlg.h" />
+    <ClInclude Include="RefundApplyOfficeDlg.h" />
+    <ClInclude Include="RefundApplySvc.h" />
+    <ClInclude Include="RefundQueryOfficeDlg.h" />
+    <ClInclude Include="RefundBaseOfficeDlg.h" />
+    <ClInclude Include="RefundReceptionDlg.h" />
+    <ClInclude Include="RefundSvc.h" />
+    <ClInclude Include="CounteractConfirmOfficeDlg.h" />
+    <ClInclude Include="CounteractSvc.h" />
+    <ClInclude Include="OthersSvc.h" />
+    <ClInclude Include="CTTVMRefund.h" />
+    <ClInclude Include="TVMFailureRefundBaseOfficeDlg.h" />
+    <ClInclude Include="TVMFailureRefundReceptionDlg.h" />
+    <ClInclude Include="TVMFailureRefundSvc.h" />
+    <ClInclude Include="NoBusinessIncomeBaseOfficeDlg.h" />
+    <ClInclude Include="NoBusinessIncomeSvc.h" />
+    <ClInclude Include="SignCardApplyBaseOfficeDlg.h" />
+    <ClInclude Include="SignCardApplyCheckOfficeDlg.h" />
+    <ClInclude Include="SignCardApplyOverOfficeDlg.h" />
+    <ClInclude Include="SignCardApplySvc.h" />
+    <ClInclude Include="SignCardReportLossBaseOfficeDlg.h" />
+    <ClInclude Include="SignCardReportLossOverOfficeDlg.h" />
+    <ClInclude Include="SignCardReportLossSvc.h" />
+    <ClInclude Include="CardSuspendAndResumeBaseOfficeDlg.h" />
+    <ClInclude Include="CardSuspendAndResumeSvc.h" />
+    <ClInclude Include="CSaleStaticBaseOfficeDlg.h" />
+    <ClInclude Include="CSaleStaticSvc.h" />
+    <ClInclude Include="ExchangeBackupDlg.h" />
+    <ClInclude Include="ExchangeBaseOfficeDlg.h" />
+    <ClInclude Include="ExchangeReceptionDlg.h" />
+    <ClInclude Include="ExchangeSvc.h" />
+    <ClInclude Include="TicketBoxExchangeSvc.h" />
+    <ClInclude Include="TicketBoxInfoDlg.h" />
+    <ClInclude Include="THModeSetMaintainDlg.h" />
+    <ClInclude Include="THModeSetSvc.h" />
+    <ClInclude Include="DeferOfficeDlg.h" />
+    <ClInclude Include="DeferReceptionDlg.h" />
+    <ClInclude Include="DeferSvc.h" />
+    <ClInclude Include="RefreshBaseOfficeDlg.h" />
+    <ClInclude Include="RefreshReceptionDlg.h" />
+    <ClInclude Include="RefreshSvc.h" />
+    <ClInclude Include="BomStatusMgr.h" />
+    <ClInclude Include="ParamMsg.h" />
+    <ClInclude Include="SCMessageContentDefine.h" />
+    <ClInclude Include="SCMessageMakeHelper.h" />
+    <ClInclude Include="SCMessageParseHelper.h" />
+    <ClInclude Include="SCSvcDef.h" />
+    <ClInclude Include="SCSvcResult.h" />
+    <ClInclude Include="ServerClientSvc.h" />
+    <ClInclude Include="BusinessTranslateSvc.h" />
+    <ClInclude Include="TranscationTranslateSvc.h" />
+    <ClInclude Include="EventDataSvc.h" />
+    <ClInclude Include="CloseOperationSequence.h" />
+    <ClInclude Include="ConnectSequence.h" />
+    <ClInclude Include="ParameterSyncSequence.h" />
+    <ClInclude Include="LPTMonitorSvc.h" />
+    <ClInclude Include="MonitorSvc.h" />
+    <ClInclude Include="RWMonitorSvc.h" />
+    <ClInclude Include="THMonitorSvc.h" />
+    <ClInclude Include="TWMonitorSvc.h" />
+    <ClInclude Include="UPSMonitorSvc.h" />
+    <ClInclude Include="ConfirmAliveSvc.h" />
+    <ClInclude Include="BOM.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="CLOGLoginAndLogoff.h" />
+    <ClInclude Include="StaffOperationLog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\COMMACCAudit\ACCAudit.vcxproj">
+      <Project>{31d3f1f3-5424-4f63-aa7e-180cd4190ab1}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMCore\Core.vcxproj">
+      <Project>{66d011cf-5dee-46ea-a4b3-dd3df683a0dc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMFTP\FTP.vcxproj">
+      <Project>{a51a4165-7eb0-49f7-8c37-314092248dd0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMLPT\LPT.vcxproj">
+      <Project>{7d02d89e-4d45-47f8-a116-7113b4283324}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMParameter\Parameter.vcxproj">
+      <Project>{d5821d9b-e806-4b36-82a6-2d76978e5828}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMRWLib\RWLib.vcxproj">
+      <Project>{e2d299a9-5c9c-4e52-a848-2aa4ccf3e832}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMRW\RW.vcxproj">
+      <Project>{bd526fc4-5358-4313-b18b-cdeb917498be}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMSC\SC.vcxproj">
+      <Project>{61da4185-c8e1-4f64-8382-76e5dbeabfe3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMShield\Shield.vcxproj">
+      <Project>{8f5a6684-d0b5-4487-bc13-540331247cdc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMSNTP\SNTP.vcxproj">
+      <Project>{faad449e-926d-4eaa-a279-f632577d02bf}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMSqlite3\Sqlite3.vcxproj">
+      <Project>{21c32401-7c0a-4ac0-be0b-6e1f737c7eef}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMTHUpdateLib\THUpdateLib.vcxproj">
+      <Project>{867f680e-5ebb-455e-a3ff-ce45d4dd1725}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMTH\TH.vcxproj">
+      <Project>{99acfaa7-316e-4772-a642-ad15aad5e888}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMTxnData\TxnData.vcxproj">
+      <Project>{a94d6b79-b20e-4f9c-ad57-7b9728b2bb3e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMMUSB\USB.vcxproj">
+      <Project>{53cd8eb3-8c22-46ea-9722-b91bdfc76a71}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\COMM\Common.vcxproj">
+      <Project>{0e358096-a972-42ee-be47-ef58e28d58c4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Printer\Printer.vcxproj">
+      <Project>{386c77af-99fd-4714-80b2-cde22e3be829}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SCAudit\SCAudit.vcxproj">
+      <Project>{14eb7722-8b34-4702-8371-27bca123f5dd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\TxnAudit\TxnAudit.vcxproj">
+      <Project>{1d4c310f-6203-453f-88d1-ffab8ae64adf}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\UPS\UPS.vcxproj">
+      <Project>{1ab58d3e-5edb-4c60-a642-75adb486c489}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="BOM.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

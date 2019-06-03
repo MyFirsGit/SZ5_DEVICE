@@ -1,0 +1,14 @@
+           记名卡申请凭证
+
+-------------------------------------
+
+用户姓名　：{USER_NAME}
+用户性别　：{SEX}
+证件类型  ：{CERTIFI_TYPE}
+证件号码  ：{CERTIFI_NUM}
+交易时间　：{TRANS_TIME}
+车站名称　：{STATION_NAME}
+设备编号　：{DEVICE_CODE}
+操作员ID　：{USER_ID}
+
+

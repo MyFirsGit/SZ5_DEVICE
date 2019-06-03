@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{cb1689ec-d966-46df-b1c7-db563c4aea91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Config">
+      <UniqueIdentifier>{7c126f17-7994-46f3-9f70-53ad526ca192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\File">
+      <UniqueIdentifier>{ce5d32d4-63fe-425f-9e7e-c640c0806bb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Function">
+      <UniqueIdentifier>{089a2f05-dfc7-4cfb-b74f-993619782de4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Thread">
+      <UniqueIdentifier>{9fa6a338-667b-4014-8d73-6077ef9800f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Zip">
+      <UniqueIdentifier>{a68cdf5d-6047-42a2-babd-4a792982ecff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Xml">
+      <UniqueIdentifier>{d5bc9247-679b-4435-b1c4-b109389e13f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Xml\TinyXml">
+      <UniqueIdentifier>{dc73b287-9eeb-464a-873a-528ecb8109a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Xml\TinyXPath">
+      <UniqueIdentifier>{01c25e36-b745-4451-9dfa-90c659170b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exception">
+      <UniqueIdentifier>{dbd1561e-0240-4031-95a3-0004d1d63d23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{1d593b8b-d5d3-4ad4-8204-e64d2f22e232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Command">
+      <UniqueIdentifier>{7fad3f1a-1e60-4081-9d0a-609d04d832b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework\Service">
+      <UniqueIdentifier>{53a1c8ee-c059-47d5-885f-aeea08d3ecb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{cc576360-bc03-45e6-ab93-04b03f22aa3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\HardWare">
+      <UniqueIdentifier>{6c02c6d7-0def-4980-b7a7-c89996c1e830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\JSON">
+      <UniqueIdentifier>{66c6cad0-622c-440e-823c-dc05ddd453e4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BR.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="sha-1.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilList.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilObject.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="GetIni.cpp">
+      <Filter>Util\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="DXFile.cpp">
+      <Filter>Util\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Xfile.cpp">
+      <Filter>Util\File</Filter>
+    </ClCompile>
+    <ClCompile Include="Sync.cpp">
+      <Filter>Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilThread.cpp">
+      <Filter>Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilTimer.cpp">
+      <Filter>Util\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="InfoZip.cpp">
+      <Filter>Util\Zip</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>Util\Xml\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>Util\Xml\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>Util\Xml\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>Util\Xml\TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="action_store.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="lex_util.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="node_set.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="tokenlist.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="xml_util.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="xpath_expression.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="xpath_processor.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="xpath_stack.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="xpath_static.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="xpath_stream.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="xpath_syntax.cpp">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionProcessor.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="InnerException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="LogException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="SysException.cpp">
+      <Filter>Exception</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameworkHook.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Hook.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerMgr.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkerThread.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Framework\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="Control.cpp">
+      <Filter>Framework\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestHandler.cpp">
+      <Filter>Framework\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="RequestManager.cpp">
+      <Filter>Framework\Command</Filter>
+    </ClCompile>
+    <ClCompile Include="BackService.cpp">
+      <Filter>Framework\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogFlow.cpp">
+      <Filter>Framework\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="ForeService.cpp">
+      <Filter>Framework\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="Service.cpp">
+      <Filter>Framework\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceHelper.cpp">
+      <Filter>Framework\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceThread.cpp">
+      <Filter>Framework\Service</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugLog.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="LogThread.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="GammaRamp.cpp">
+      <Filter>Util\HardWare</Filter>
+    </ClCompile>
+    <ClCompile Include="des.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="json_reader.cpp">
+      <Filter>Util\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="json_value.cpp">
+      <Filter>Util\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="json_writer.cpp">
+      <Filter>Util\JSON</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="json_internalarray.inl">
+      <Filter>Util\JSON</Filter>
+    </None>
+    <None Include="json_internalmap.inl">
+      <Filter>Util\JSON</Filter>
+    </None>
+    <None Include="json_valueiterator.inl">
+      <Filter>Util\JSON</Filter>
+    </None>
+    <None Include="sconscript">
+      <Filter>Util\JSON</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerMgr.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="LogThread.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionProcessor.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="InnerException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="LogException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="SysException.h">
+      <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Framework\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="Control.h">
+      <Filter>Framework\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="FuncCommand.h">
+      <Filter>Framework\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestHandler.h">
+      <Filter>Framework\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="RequestManager.h">
+      <Filter>Framework\Command</Filter>
+    </ClInclude>
+    <ClInclude Include="BackService.h">
+      <Filter>Framework\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogFlow.h">
+      <Filter>Framework\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="ForeService.h">
+      <Filter>Framework\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="Service.h">
+      <Filter>Framework\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceHelper.h">
+      <Filter>Framework\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceThread.h">
+      <Filter>Framework\Service</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreAPI.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreCommon.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameworkHook.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="Hook.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerThread.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreExp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugLog.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Any.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Bag.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="BR.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="CVerify.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="des.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="sha-1.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilList.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilObject.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Validation.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="InfoZip.h">
+      <Filter>Util\Zip</Filter>
+    </ClInclude>
+    <ClInclude Include="UnzipDLL.h">
+      <Filter>Util\Zip</Filter>
+    </ClInclude>
+    <ClInclude Include="ZCallBck.h">
+      <Filter>Util\Zip</Filter>
+    </ClInclude>
+    <ClInclude Include="ZipDLL.h">
+      <Filter>Util\Zip</Filter>
+    </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>Util\Xml\TinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>Util\Xml\TinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="GetIni.h">
+      <Filter>Util\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="DXFile.h">
+      <Filter>Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="DXFileSerializer.h">
+      <Filter>Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Serializer.h">
+      <Filter>Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="Xfile.h">
+      <Filter>Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="XFileSerializer.h">
+      <Filter>Util\File</Filter>
+    </ClInclude>
+    <ClInclude Include="delegate.h">
+      <Filter>Util\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="Func.h">
+      <Filter>Util\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="GammaRamp.h">
+      <Filter>Util\HardWare</Filter>
+    </ClInclude>
+    <ClInclude Include="Sync.h">
+      <Filter>Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilThread.h">
+      <Filter>Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilTimer.h">
+      <Filter>Util\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="xpath_expression.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="xpath_processor.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="xpath_stack.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="xpath_static.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="xpath_stream.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="xpath_syntax.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="xml_util.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxpath_conf.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="tokenlist.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="node_set.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="lex_token.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="lex_util.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="action_store.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="byte_stream.h">
+      <Filter>Util\Xml\TinyXPath</Filter>
+    </ClInclude>
+    <ClInclude Include="autolink.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="features.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="forwards.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="json.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="json_batchallocator.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="json_tool.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="reader.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="value.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="writer.h">
+      <Filter>Util\JSON</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Core.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

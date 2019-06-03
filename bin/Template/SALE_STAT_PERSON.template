@@ -1,0 +1,48 @@
+          天津地铁结帐凭证
+
+---------一票通相关业务明细-----------
+凭条号：{BILL_NUM}
+售票交易
+         金额(元)：{ISSUE_ACC_AMOUNT}
+         数量(张)：{ISSUE_ACC_COUNT}
+补票交易
+         金额(元)：{ADJUST_ACC_AMOUNT}
+         数量(张)：{ADJUST_ACC_COUNT}
+退票金额
+         金额(元)：{REFUND_ACC_AMOUNT}
+         数量(张)：{REFUND_ACC_COUNT}
+抵    消
+         金额(元)：{COUNTERACT_ACC_AMOUNT}
+         数量(张)：{COUNTERACT_ACC_COUNT}
+---------一卡通相关业务明细-----------
+售票交易
+         金额(元)：{ISSUE_ECT_AMOUNT}
+         数量(张)：{ISSUE_ECT_COUNT}
+充值交易
+         金额(元)：{CHARGE_ECT_AMOUNT}
+         数量(张)：{CHARGE_ECT_COUNT}
+现金补票
+         金额(元)：{ADJUST_ECT_AMOUNT}
+         数量(张)：{ADJUST_ECT_COUNT}
+非营业性收支
+         金额(元)：{NOBUSINESS_INCOME_AMOUNT}
+         数量(张)：{NOBUSINESS_INCOME_COUNT}
+TVM故障退款
+         金额(元)：{TVM_REFUND_AMOUNT}
+         数量(张)：{TVM_REFUND_COUNT}
+退卡金额
+         金额(元)：{REFUND_ECT_AMOUNT}
+         数量(张)：{REFUND_ECT_COUNT}
+退卡押金 
+         金额(元)：{REFUND_ECT_DEPOSIT_AMOUNT}
+         数量(张)：{REFUND_ECT_DEPOSIT_COUNT}
+手续费用
+         金额(元)：{COST_ECT_AMOUNT}
+         数量(张)：{COST_ECT_COUNT}
+---------------------------------------
+总 收 入： {TOTAL_AMOUNT}
+设备编号： {DEVICE_CODE}
+员工号  ： {USER_ID}
+操作时间： {BEGIN_DATE_TIME}
+结束时间： {END_DATA_TIME}
+车站名称： {STATION_NAME}

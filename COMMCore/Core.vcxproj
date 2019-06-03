@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{66D011CF-5DEE-46EA-A4B3-DD3DF683A0DC}</ProjectGuid>
+    <RootNamespace>Core</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Keyword>MFCDLLProj</Keyword>
+    <SccAuxPath>SAK</SccAuxPath>
+    <ProjectName>COMMCore</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">COMMCore</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../COMM;../COMMACCAudit;../COMMCore;../COMMFTP;../COMMLPT;../COMMParameter;../COMMPrinter;../COMMRW;../COMMRWLib;../COMMSC;../COMMShield;../COMMSNTP;../COMMTH;../COMMTHLib;../COMMTHUpdateLib;../COMMTxnData;../COMMUSB;../COMMWavPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>shlwapi.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>.\Core.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>../lib/$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <ProgramDatabaseFile>$(OutputPath)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\COMM;..\COMMACCAudit;..\COMMCore;..\COMMFTP;..\COMMLPT;..\COMMParameter;..\COMMPrinter;..\COMMRW;..\COMMRWLib;..\COMMSC;..\COMMShield;..\COMMSNTP;..\COMMSqlite3;..\COMMTH;..\COMMTHLib;..\COMMTHUpdateLib;..\COMMTxnData;..\COMMUPS;..\COMMUSB;..\COMMWavPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRDLL;CORE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>shlwapi.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <ModuleDefinitionFile>.\Core.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutputPath)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>../lib/$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="des.cpp" />
+    <ClCompile Include="GammaRamp.cpp" />
+    <ClCompile Include="json_reader.cpp" />
+    <ClCompile Include="json_value.cpp" />
+    <ClCompile Include="json_writer.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="BR.cpp" />
+    <ClCompile Include="sha-1.cpp" />
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="UtilList.cpp" />
+    <ClCompile Include="UtilObject.cpp" />
+    <ClCompile Include="GetIni.cpp" />
+    <ClCompile Include="DXFile.cpp" />
+    <ClCompile Include="Xfile.cpp" />
+    <ClCompile Include="Sync.cpp" />
+    <ClCompile Include="UtilThread.cpp" />
+    <ClCompile Include="UtilTimer.cpp" />
+    <ClCompile Include="InfoZip.cpp" />
+    <ClCompile Include="tinystr.cpp" />
+    <ClCompile Include="tinyxml.cpp" />
+    <ClCompile Include="tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxmlparser.cpp" />
+    <ClCompile Include="action_store.cpp" />
+    <ClCompile Include="lex_util.cpp" />
+    <ClCompile Include="node_set.cpp" />
+    <ClCompile Include="tokenlist.cpp" />
+    <ClCompile Include="xml_util.cpp" />
+    <ClCompile Include="xpath_expression.cpp" />
+    <ClCompile Include="xpath_processor.cpp" />
+    <ClCompile Include="xpath_stack.cpp" />
+    <ClCompile Include="xpath_static.cpp" />
+    <ClCompile Include="xpath_stream.cpp" />
+    <ClCompile Include="xpath_syntax.cpp" />
+    <ClCompile Include="ExceptionProcessor.cpp" />
+    <ClCompile Include="InnerException.cpp" />
+    <ClCompile Include="LogException.cpp" />
+    <ClCompile Include="SysException.cpp" />
+    <ClCompile Include="FrameworkHook.cpp" />
+    <ClCompile Include="Hook.cpp" />
+    <ClCompile Include="TimerMgr.cpp" />
+    <ClCompile Include="WorkerThread.cpp" />
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="Control.cpp" />
+    <ClCompile Include="RequestHandler.cpp" />
+    <ClCompile Include="RequestManager.cpp" />
+    <ClCompile Include="BackService.cpp" />
+    <ClCompile Include="DialogFlow.cpp" />
+    <ClCompile Include="ForeService.cpp" />
+    <ClCompile Include="Service.cpp" />
+    <ClCompile Include="ServiceHelper.cpp" />
+    <ClCompile Include="ServiceThread.cpp" />
+    <ClCompile Include="DebugLog.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="LogThread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Core.def" />
+    <None Include="json_internalarray.inl" />
+    <None Include="json_internalmap.inl" />
+    <None Include="json_valueiterator.inl" />
+    <None Include="ReadMe.txt" />
+    <None Include="sconscript" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="action_store.h" />
+    <ClInclude Include="Any.h" />
+    <ClInclude Include="autolink.h" />
+    <ClInclude Include="BackService.h" />
+    <ClInclude Include="Bag.h" />
+    <ClInclude Include="BR.h" />
+    <ClInclude Include="byte_stream.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="Control.h" />
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="CoreAPI.h" />
+    <ClInclude Include="CoreCommon.h" />
+    <ClInclude Include="CoreExp.h" />
+    <ClInclude Include="CVerify.h" />
+    <ClInclude Include="DebugLog.h" />
+    <ClInclude Include="delegate.h" />
+    <ClInclude Include="des.h" />
+    <ClInclude Include="DialogFlow.h" />
+    <ClInclude Include="DXFile.h" />
+    <ClInclude Include="DXFileSerializer.h" />
+    <ClInclude Include="ExceptionProcessor.h" />
+    <ClInclude Include="features.h" />
+    <ClInclude Include="ForeService.h" />
+    <ClInclude Include="forwards.h" />
+    <ClInclude Include="FrameworkHook.h" />
+    <ClInclude Include="Func.h" />
+    <ClInclude Include="FuncCommand.h" />
+    <ClInclude Include="GammaRamp.h" />
+    <ClInclude Include="GetIni.h" />
+    <ClInclude Include="Hook.h" />
+    <ClInclude Include="InfoZip.h" />
+    <ClInclude Include="InnerException.h" />
+    <ClInclude Include="json.h" />
+    <ClInclude Include="json_batchallocator.h" />
+    <ClInclude Include="json_tool.h" />
+    <ClInclude Include="lex_token.h" />
+    <ClInclude Include="lex_util.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="LogException.h" />
+    <ClInclude Include="node_set.h" />
+    <ClInclude Include="reader.h" />
+    <ClInclude Include="RequestHandler.h" />
+    <ClInclude Include="RequestManager.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Serializer.h" />
+    <ClInclude Include="Service.h" />
+    <ClInclude Include="ServiceHelper.h" />
+    <ClInclude Include="ServiceThread.h" />
+    <ClInclude Include="sha-1.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Sync.h" />
+    <ClInclude Include="SysException.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TimerMgr.h" />
+    <ClInclude Include="LogThread.h" />
+    <ClInclude Include="tinystr.h" />
+    <ClInclude Include="tinyxml.h" />
+    <ClInclude Include="tinyxpath_conf.h" />
+    <ClInclude Include="tokenlist.h" />
+    <ClInclude Include="UnzipDLL.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="UtilList.h" />
+    <ClInclude Include="UtilObject.h" />
+    <ClInclude Include="UtilThread.h" />
+    <ClInclude Include="UtilTimer.h" />
+    <ClInclude Include="Validation.h" />
+    <ClInclude Include="value.h" />
+    <ClInclude Include="WorkerThread.h" />
+    <ClInclude Include="writer.h" />
+    <ClInclude Include="Xfile.h" />
+    <ClInclude Include="XFileSerializer.h" />
+    <ClInclude Include="xml_util.h" />
+    <ClInclude Include="xpath_expression.h" />
+    <ClInclude Include="xpath_processor.h" />
+    <ClInclude Include="xpath_stack.h" />
+    <ClInclude Include="xpath_static.h" />
+    <ClInclude Include="xpath_stream.h" />
+    <ClInclude Include="xpath_syntax.h" />
+    <ClInclude Include="ZCallBck.h" />
+    <ClInclude Include="ZipDLL.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Core.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

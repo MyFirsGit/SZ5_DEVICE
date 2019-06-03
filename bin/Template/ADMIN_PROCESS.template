@@ -1,0 +1,12 @@
+            行政处理凭证
+
+-------------------------------------
+
+处理类别  ： {PROCESS_TYPE}
+收支类型  ： {BUSINESS_TYPE}
+  手续费  ： {SERVICE_FEE}
+交易金额  ： {TRANS_AMOUNT}
+交易时间  ： {TRANS_TIME}
+车站名称  ： {STATION_NAME}
+设备编号  ： {DEVICE_CODE}
+操作员ID  ： {USER_ID}

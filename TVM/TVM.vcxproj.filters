@@ -1,0 +1,1812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{f28e22e5-81d7-4eae-99e0-ffe1b7b44626}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\HardwareHelper">
+      <UniqueIdentifier>{8ea39039-5861-46f4-bd85-82f5ed710eed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\SoftwareHelper">
+      <UniqueIdentifier>{8c473632-f6f3-43b4-b755-57d0fdba5590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\CardInfo">
+      <UniqueIdentifier>{76281b72-e8ca-4380-9010-13687c75ba8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\IniInfo">
+      <UniqueIdentifier>{8dc9cce2-6fb3-4281-a34f-d93ec548d482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Definition">
+      <UniqueIdentifier>{e9fa8980-5d52-44e1-8273-c3acedf408a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExceptionManager">
+      <UniqueIdentifier>{700912e4-5177-4702-a517-28e25931d215}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services">
+      <UniqueIdentifier>{17773f86-6463-4db7-b802-253031403e5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService">
+      <UniqueIdentifier>{ad0fa6e4-f5d2-48a7-952a-9a51965a4f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\Controls">
+      <UniqueIdentifier>{74010ac8-be18-40d2-a704-ddad0cfb650c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\Components">
+      <UniqueIdentifier>{b9119437-a21e-4b20-930c-1a21698cfd2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\InitSvc">
+      <UniqueIdentifier>{90c2a07b-7079-4e20-ad00-8bc3e330262f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\LoginSvc">
+      <UniqueIdentifier>{8a961352-848d-437c-b35f-a7953e1a7d0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService">
+      <UniqueIdentifier>{4602e396-a21d-41ac-a353-d75ab1630f76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc">
+      <UniqueIdentifier>{d6b02373-cba5-4aa4-b855-e259ba0f0cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\NetworkTestSvc">
+      <UniqueIdentifier>{fbd48cb9-2596-4b29-83a8-2cd2ddd2e82e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\PrinterTestSvc">
+      <UniqueIdentifier>{32fea4a8-52ac-4686-af92-a33f4e559308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc">
+      <UniqueIdentifier>{4cf4ba7e-c00d-416a-9bbc-c090c92d3cb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\StationSetSvc">
+      <UniqueIdentifier>{e6ef1441-6d69-4f67-a90d-114863955f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\DeviceModeSwitchSvc">
+      <UniqueIdentifier>{61a74a6f-eeb6-4634-9287-a52ca8b208a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\TimeSetSvc">
+      <UniqueIdentifier>{bd61e84e-c61f-4a88-a557-ecf7a08d7f24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\CommunicationSetSvc">
+      <UniqueIdentifier>{8a4eee87-892d-4228-bdbf-25a56c15aa29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\UDSNSetSvc">
+      <UniqueIdentifier>{713723e5-4e77-4e54-ad48-89ac2d8d0a1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\RFIDSetSev">
+      <UniqueIdentifier>{5593044e-d3fb-445e-93ee-66794d65c8f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DataManageSvc">
+      <UniqueIdentifier>{94b01709-3198-4515-97d5-c7db35f8c3b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DataManageSvc\DataInputSvc">
+      <UniqueIdentifier>{37e03520-4c46-4cb2-87eb-d8218e9929c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DataManageSvc\DataOutputSvc">
+      <UniqueIdentifier>{4fcb3eb0-a226-4bca-aacf-a437f0d3568a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\RemoveExceptionSvc">
+      <UniqueIdentifier>{12f3ab5c-c102-469e-869f-6b64ee3449e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\LogoffSvc">
+      <UniqueIdentifier>{d6db7892-73f2-4d57-ae79-04b02dcb069e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\BackService">
+      <UniqueIdentifier>{69df9c98-a76b-46cc-812f-adfb00a48d71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\BackService\SCSvc">
+      <UniqueIdentifier>{657c38f3-067d-435a-b39a-ac9ffb775f24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\BackService\SCSvc\BusinessTranslateSvc">
+      <UniqueIdentifier>{dbcce994-26cc-448b-b7aa-3d105a7f76fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\BackService\SCSvc\TranscationTranslateSvc">
+      <UniqueIdentifier>{424ea81a-de3d-41d7-b3c6-8369d37cec39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\BackService\SCSvc\EventDataSvc">
+      <UniqueIdentifier>{93cd71d8-93b0-447d-a830-9a3ad5832153}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\BackService\SCSvc\Sequences">
+      <UniqueIdentifier>{ed0495fe-05cb-4fe1-9e63-59e18b1e326a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\BackService\MonitorSvc">
+      <UniqueIdentifier>{d59d6bec-9814-448d-bd6f-9c265ccd3921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\BackService\ConfirmAliveSvc">
+      <UniqueIdentifier>{fd8f2da0-b756-4f24-83fc-c990872d36ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{86498fd1-90da-4836-af7f-701c8f195a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{aa2bee2f-a152-4f0b-898a-2b91f72086f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\TransactionHistorySvc">
+      <UniqueIdentifier>{ee185cf6-7f18-473b-b161-9c8216cc7665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SaleStaticSvc">
+      <UniqueIdentifier>{41b3288b-c419-442e-8432-3fd95ea0976a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\CardBoxManageSvc">
+      <UniqueIdentifier>{f1be96f0-a33c-482e-85c4-db8aee71e5a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\BanknoteBoxManageSvc">
+      <UniqueIdentifier>{0e83b7a7-b306-4e23-8b98-38366fa955b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\CoinBoxManageSvc">
+      <UniqueIdentifier>{b51b4258-404f-4ed5-a8f2-a53253a5bb9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SunModeSetSvc">
+      <UniqueIdentifier>{fa2873af-db17-4d59-b84b-d2d41de2ddcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\ReceiptReprintSvc">
+      <UniqueIdentifier>{74cf57dd-00b6-42c8-8d42-a9e080019f50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\RWTestSvc">
+      <UniqueIdentifier>{46bec8fc-bebc-45d9-8b11-9b8e506aa7db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\CardModuleTestSvc">
+      <UniqueIdentifier>{36e39bb6-0bbb-41a2-8591-5e9c4d9f47d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\CoinModuleTestSvc">
+      <UniqueIdentifier>{6f3045b3-48f9-4b15-bb22-a03f66132dbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\BanknoteAcceptModuleTestSvc">
+      <UniqueIdentifier>{fa0f728e-fb9b-4535-a853-bdf353d8d2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\BanknoteChangeModuleTestSvc">
+      <UniqueIdentifier>{619e0c0e-1522-4eb6-aa99-30955b5b037d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\IOModuleTestSvc">
+      <UniqueIdentifier>{7533b1c2-ee6e-44f3-90d2-deccb1b2d963}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\WaitMaintenanceSvc">
+      <UniqueIdentifier>{aa9389fc-8156-4c95-8017-cb6761b24105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService">
+      <UniqueIdentifier>{e556cdc4-2557-493f-871c-092cbbf17c6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\IssueSvc">
+      <UniqueIdentifier>{e2afbb3a-843a-4c85-8fd1-e4cee8fd78aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\ChargeSvc">
+      <UniqueIdentifier>{05401ea6-57c7-45a4-a9ac-bea9e822a0c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\AnalyzeSvc">
+      <UniqueIdentifier>{c7f982ea-e68a-475a-a230-719c5fe4b644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\AssistSvc">
+      <UniqueIdentifier>{ebc4ecc8-0119-4b7b-9a8a-eaa9787d3872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\ProductIssueSvc">
+      <UniqueIdentifier>{65316e54-a326-48e3-8be2-078813433bf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\BlindIssueSvc">
+      <UniqueIdentifier>{76d1b687-4ebd-480a-b6be-f7352a059554}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\BlindChargeSvc">
+      <UniqueIdentifier>{86b42197-94db-4d6a-959c-809e01f2460b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\BlindProductIssueSvc">
+      <UniqueIdentifier>{363361e7-7852-4e01-832b-23455fe1ab10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SelectLanguage">
+      <UniqueIdentifier>{e0e4220c-2d35-4537-84ad-57db2ddf6399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\Param">
+      <UniqueIdentifier>{74401733-c9a3-42ad-b71f-e5766028503e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\CoinAddingBoxSetSvc">
+      <UniqueIdentifier>{d72dd543-48fe-494d-bcb6-ee83290f383c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\SwitchOFFSetSvc">
+      <UniqueIdentifier>{f554ae4c-2dc4-4d67-a50d-3d1a5da97438}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util\CountInfo">
+      <UniqueIdentifier>{a3aacbaa-9b3e-4fa3-81f7-ed2c195ec845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceStatusSvc">
+      <UniqueIdentifier>{06091ecd-f935-40fc-accd-ed5955192a43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\CoinBoxManageSvc\AddCoinToDedicatedChangeBox">
+      <UniqueIdentifier>{d3b5883a-f512-4e06-ad5d-0d514d29a629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\CoinBoxManageSvc\AttachCoinCollectionBox">
+      <UniqueIdentifier>{40fc40fd-9b02-426d-b428-e829b7cfad65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\CoinBoxManageSvc\DetachCoinCollectionBox">
+      <UniqueIdentifier>{5b07ea83-d723-45b6-a480-c70cdda873c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\CoinBoxManageSvc\CollectCoin">
+      <UniqueIdentifier>{e7fbed33-d20a-4495-bab1-c3ee4876982e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\PassengerService\StandbySvc">
+      <UniqueIdentifier>{a5567c5f-3e36-4d02-8841-1eca46b1d8d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\ScreenBrightnessSetSvc">
+      <UniqueIdentifier>{46ed65cd-6970-48e3-8f76-fabdd3649efe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\BalanceSvc">
+      <UniqueIdentifier>{011fd111-88be-41e6-bdf1-0197dbda869d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\ModeSettingsSvc">
+      <UniqueIdentifier>{e3a8192e-8497-48c2-a58b-d77df9b5c3f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DataManageSvc\VersionInfo">
+      <UniqueIdentifier>{20ab4c64-14bf-40f9-ac75-4f7117ea39d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\AllDeviceStatus">
+      <UniqueIdentifier>{7692d061-7619-403d-964e-bf1dfd467ce4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxRemoval">
+      <UniqueIdentifier>{c7521099-a727-4ab5-a6c5-64fcc86fa652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxInstallation">
+      <UniqueIdentifier>{e142ae49-cd42-4151-b8de-16c02c002397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxRemoval">
+      <UniqueIdentifier>{79d39801-f2a3-401e-934b-97909ed3f174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxInstallation">
+      <UniqueIdentifier>{da91e015-65e0-4508-8b64-d610189b0b71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\OneKeySettlement">
+      <UniqueIdentifier>{9e91a9a2-7217-422f-9e6e-b29d94b64664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\SystemSetSvc\DeviceComportAndBaudrateSvc">
+      <UniqueIdentifier>{452b2256-bfd2-4494-8c3a-2e2e14a847fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteBoxCollection">
+      <UniqueIdentifier>{1755ff52-950a-41aa-b13b-fa5aa74dfc40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\DeviceTestSvc\TokenModuleTestSvc">
+      <UniqueIdentifier>{1637d0f1-fc09-4a27-b598-e378c19ecd5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\CoinBoxManageSvc\InstallCoinChangeBox">
+      <UniqueIdentifier>{7bda5915-e6a1-4dcc-a787-c433bed9a872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Services\ForeService\MaintainService\CoinBoxManageSvc\RemoveCoinChangeBox">
+      <UniqueIdentifier>{fdb649df-da1d-44e1-81dc-1861af33e5db}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\TVM.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="res\TVM_btn_Cancel_Default.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_Charge_Default.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_Charge_Pressed.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_Language_Default.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_Language_Pressed.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_No_Print_Confirm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_Print_Confirm.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_Purchase_Ok.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_bg_Section_1_1.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_bg_Section_1_2.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_bg_Section_2_1.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_bg_Section_2_2.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_Transfer_off.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_Transfer_on.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_price_on.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_price_off.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_bg_StatusAbnormal.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_bg_StatusNormal.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\SJT_issue.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\AreaBtnImage.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_station_off.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\TVM_btn_station_on.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\bin\res\TVM_LOGO .png">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TVM.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AppSession.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="mlcEncrypt.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="AuditHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="FTPHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="LogHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="ShieldKeyHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="SNTPHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="TicketHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="UpgradeHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="ACCCardInfo.cpp">
+      <Filter>Util\CardInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="CPUCardInfo.cpp">
+      <Filter>Util\CardInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="ECTCardInfo.cpp">
+      <Filter>Util\CardInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionInfo.cpp">
+      <Filter>Util\IniInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="GuideInfo.cpp">
+      <Filter>Util\IniInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIInfo.cpp">
+      <Filter>Util\IniInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="LanguageInfo.cpp">
+      <Filter>Util\IniInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="TpuErrorInfo.cpp">
+      <Filter>Util\IniInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="VersionInfo.cpp">
+      <Filter>Util\IniInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="TVMDef.cpp">
+      <Filter>Definition</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionMgr.cpp">
+      <Filter>ExceptionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceMgr.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapManager.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlManager.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="CursorMgr.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrmRec.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuMgr.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortCutKeyManager.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="TVMForeService.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonGroup.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositGroupBox.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="GEdit.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupBox.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="GStatic.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Lable.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Panel.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceptionStaticInfo.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="Table.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="XButton.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildView.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildViewRec.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GuideDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="GuideReceptionDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LogoDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageBox.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="OperationDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="OutOfReceptionDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceptionDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceptionHeadDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TVMDialogFlow.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="WaitingOfficeDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="WelcomeReceptionDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="InitDlg.cpp">
+      <Filter>Services\ForeService\InitSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="InitSvc.cpp">
+      <Filter>Services\ForeService\InitSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginDlg.cpp">
+      <Filter>Services\ForeService\LoginSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="LoginSvc.cpp">
+      <Filter>Services\ForeService\LoginSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkItemMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\NetworkTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\NetworkTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="PrinterTestMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\PrinterTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="PrinterTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\PrinterTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CardReadWriteMachineTestMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\RWTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="RWTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\RWTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="StationSetMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\StationSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="StationSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\StationSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceModeSwitchDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\DeviceModeSwitchSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceModeSwitchSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\DeviceModeSwitchSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSetBaseOfficeDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\TimeSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\TimeSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CommunicationSetMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\CommunicationSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CommunicationSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\CommunicationSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="UDSNSetMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\UDSNSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="UDSNSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\UDSNSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="RFIDSetBaseOfficeDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\RFIDSetSev</Filter>
+    </ClCompile>
+    <ClCompile Include="RFIDSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\RFIDSetSev</Filter>
+    </ClCompile>
+    <ClCompile Include="DataInputSelectMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\DataInputSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="DataInputSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\DataInputSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="DataOutputSelectMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\DataOutputSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="DataOutputSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\DataOutputSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveExceptionDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\RemoveExceptionSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveExceptionSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\RemoveExceptionSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="IssueSvc.cpp">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargeReceptionDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\ChargeSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ChargeSvc.cpp">
+      <Filter>Services\ForeService\PassengerService\ChargeSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalyzeSvc.cpp">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="LogoffHelper.cpp">
+      <Filter>Services\ForeService\LogoffSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamMsg.cpp">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SCMessageMakeHelper.cpp">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SCMessageParseHelper.cpp">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerClientSvc.cpp">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="TVMStatusMgr.cpp">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="BusinessTranslateSvc.cpp">
+      <Filter>Services\BackService\SCSvc\BusinessTranslateSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="TranscationTranslateSvc.cpp">
+      <Filter>Services\BackService\SCSvc\TranscationTranslateSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="EventDataSvc.cpp">
+      <Filter>Services\BackService\SCSvc\EventDataSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CloseOperationSequence.cpp">
+      <Filter>Services\BackService\SCSvc\Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectSequence.cpp">
+      <Filter>Services\BackService\SCSvc\Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterSyncSequence.cpp">
+      <Filter>Services\BackService\SCSvc\Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="MonitorSvc.cpp">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfirmAliveSvc.cpp">
+      <Filter>Services\BackService\ConfirmAliveSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="LanguageDialog.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="TVM.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="PrinterHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="IOModuleHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusDisplayModuleHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinModuleHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="IOMonitorSvc.cpp">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CardTicketBoxInfoDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\CardBoxManageSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="MaintenanceBaseDlg.cpp">
+      <Filter>Services\ForeService\MaintainService</Filter>
+    </ClCompile>
+    <ClCompile Include="MaintenanceSvc.cpp">
+      <Filter>Services\ForeService\MaintainService</Filter>
+    </ClCompile>
+    <ClCompile Include="RootSvc.cpp">
+      <Filter>Services</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinModuleMonitorSvc.cpp">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CardRWMonitorSvc.cpp">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CardModuleMonitorSvc.cpp">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="RechargeRWMonitorSvc.cpp">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CardBoxManageSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\CardBoxManageSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceptionBitmapInfo.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="PictureEx.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="NavigationDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="TransactionHistoryBaseDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\TransactionHistorySvc</Filter>
+    </ClCompile>
+    <ClCompile Include="TransactionHistorySvc.cpp">
+      <Filter>Services\ForeService\MaintainService\TransactionHistorySvc</Filter>
+    </ClCompile>
+    <ClCompile Include="StartOperationSequence.cpp">
+      <Filter>Services\BackService\SCSvc\Sequences</Filter>
+    </ClCompile>
+    <ClCompile Include="IssueAreaMapDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="LineGroup.cpp">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectLanguageBaseDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SelectLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectLanguageSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SelectLanguage</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcTVMOperationParam.cpp">
+      <Filter>Util\Param</Filter>
+    </ClCompile>
+    <ClCompile Include="CAfcAVMOperationParam.cpp">
+      <Filter>Util\Param</Filter>
+    </ClCompile>
+    <ClCompile Include="DataHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="CGuiParam.cpp">
+      <Filter>Util\IniInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinModuleMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\CoinModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinModuleTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\CoinModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinAddingBoxSetMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\CoinAddingBoxSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinAddingBoxSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\CoinAddingBoxSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SwitchOffSetMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\SwitchOFFSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SwitchOffSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\SwitchOFFSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CTBanknoteCountInfo.cpp">
+      <Filter>Util\CountInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="CTCardCountInfo.cpp">
+      <Filter>Util\CountInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="CTCoinCountInfo.cpp">
+      <Filter>Util\CountInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceStatusDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceStatusSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceStatusSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceStatusSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteAcceptMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\BanknoteAcceptModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteAcceptModuleTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\BanknoteAcceptModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseHistoryDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseM1InfoDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseUlInfoDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CBaseUserInfoDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartCardTestMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\CardModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SmartCardTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\CardModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="IOModuleTestMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\IOModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="IOModuleTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\IOModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="MessagePictureBox.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductIssueReceptionDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\ProductIssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceipPrintBaseDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\ReceiptReprintSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ReceipPrintSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\ReceiptReprintSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SaleStaticDetailDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SaleStaticSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SaleStaticOverViewDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SaleStaticSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="SaleStaticSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SaleStaticSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="PassengerResultDlg.cpp">
+      <Filter>Services\ForeService\PassengerService</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinBoxManageAttachCoinCollectionBoxDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\AttachCoinCollectionBox</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinBoxManageAttachCoinCollectionBoxSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\AttachCoinCollectionBox</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinBoxManageDetachCoinCollectionBoxDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\DetachCoinCollectionBox</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinBoxManageDetachCoinCollectionBoxSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\DetachCoinCollectionBox</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinBoxManageCollectCoinDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\CollectCoin</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinBoxManageCollectCoinSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\CollectCoin</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinBoxManageAddCoinToDedicatedChangeBoxDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\AddCoinToDedicatedChangeBox</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinBoxManageAddCoinToDedicatedChangeBoxSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\AddCoinToDedicatedChangeBox</Filter>
+    </ClCompile>
+    <ClCompile Include="AssistDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\AssistSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="AssistSvc.cpp">
+      <Filter>Services\ForeService\PassengerService\AssistSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="StandbyDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\StandbySvc</Filter>
+    </ClCompile>
+    <ClCompile Include="StandbySvc.cpp">
+      <Filter>Services\ForeService\PassengerService\StandbySvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseXML.cpp">
+      <Filter>Services\ForeService\PassengerService\StandbySvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenBrightnessSetMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\ScreenBrightnessSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenBrightnessSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\ScreenBrightnessSetSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="BalanceSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\BalanceSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="BalanceDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\BalanceSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ModeSettingsDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\ModeSettingsSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ModeSettingsSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\ModeSettingsSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="PassengerOperationLog.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="BankNoteCollectionModuleMonitorSvc.cpp">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="VersionInfoDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\VersionInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="VersionInfoSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\VersionInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="AllDeviceStatusMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\AllDeviceStatus</Filter>
+    </ClCompile>
+    <ClCompile Include="AllDeviceStatusSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\AllDeviceStatus</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessDlg.cpp">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="THHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="TVMRWHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="BHChangeHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteChangeAndInvalidBoxRemovalDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxRemoval</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteChangeAndInvalidBoxRemovalSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxRemoval</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteCollectingBoxInstallationDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxInstallation</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteCollectingBoxInstallationSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxInstallation</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteCollectingBoxRemovalDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxRemoval</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteCollectingBoxRemovalSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxRemoval</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeAndInvalidBanknoteboxManageDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxInstallation</Filter>
+    </ClCompile>
+    <ClCompile Include="ChangeAndInvalidBanknoteboxManageSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxInstallation</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteChangeMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\BanknoteChangeModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteChangeModuleTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\BanknoteChangeModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="OneKeySettlementSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\OneKeySettlement</Filter>
+    </ClCompile>
+    <ClCompile Include="OneKeySettlementDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\OneKeySettlement</Filter>
+    </ClCompile>
+    <ClCompile Include="ComportAndBaudrateSetDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\DeviceComportAndBaudrateSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="ComportAndBaudrateSetSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\DeviceComportAndBaudrateSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateDump.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="BRHModuleHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiParaMgr.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteBoxCollectionDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteBoxCollection</Filter>
+    </ClCompile>
+    <ClCompile Include="BanknoteBoxCollectionSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteBoxCollection</Filter>
+    </ClCompile>
+    <ClCompile Include="WebServerHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="PrinterMonitorSvc.cpp">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="TokenHelper.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseStationMap.cpp">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="CTTokenCountInfo.cpp">
+      <Filter>Util\CountInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="TokenModuleMaintainDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\TokenModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="TokenModuleTestSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\TokenModuleTestSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="QRCodeHelper.cpp">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClCompile>
+    <ClCompile Include="IssueWithCashDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="IssueWithSvtDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="IssueWithNetDlg.cpp">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="AllLineShowBox.cpp">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="MainSvc.cpp">
+      <Filter>Services\ForeService</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductIssueSvc.cpp">
+      <Filter>Services\ForeService\PassengerService\ProductIssueSvc</Filter>
+    </ClCompile>
+    <ClCompile Include="PassengerForeSvc.cpp">
+      <Filter>Services\ForeService\PassengerService</Filter>
+    </ClCompile>
+    <ClCompile Include="InstallCoinChangeBoxDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\InstallCoinChangeBox</Filter>
+    </ClCompile>
+    <ClCompile Include="InstallCoinChangeBoxSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\InstallCoinChangeBox</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveCoinChangeBoxDlg.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\RemoveCoinChangeBox</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveCoinChangeBoxSvc.cpp">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\RemoveCoinChangeBox</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionInfo.cpp">
+      <Filter>ExceptionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="PrinterException.cpp">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppSession.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="mlcEncrypt.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="AuditHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="FTPHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="LogHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ShieldKeyHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="SNTPHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TicketHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="UpgradeHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ACCCardInfo.h">
+      <Filter>Util\CardInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="CPUCardInfo.h">
+      <Filter>Util\CardInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="ECTCardInfo.h">
+      <Filter>Util\CardInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionInfo.h">
+      <Filter>Util\IniInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="GuideInfo.h">
+      <Filter>Util\IniInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIInfo.h">
+      <Filter>Util\IniInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="LanguageInfo.h">
+      <Filter>Util\IniInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="TpuErrorInfo.h">
+      <Filter>Util\IniInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="VersionInfo.h">
+      <Filter>Util\IniInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageIDDefinition.h">
+      <Filter>Definition</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceDefinition.h">
+      <Filter>Definition</Filter>
+    </ClInclude>
+    <ClInclude Include="SvcDef.h">
+      <Filter>Definition</Filter>
+    </ClInclude>
+    <ClInclude Include="TVMDef.h">
+      <Filter>Definition</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDefinition.h">
+      <Filter>Definition</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionMgr.h">
+      <Filter>ExceptionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="RootSvc.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceMgr.h">
+      <Filter>Services</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapManager.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlManager.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorMgr.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrmRec.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="MainSvc.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuMgr.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="ShortCutKeyManager.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="TVMForeService.h">
+      <Filter>Services\ForeService</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonGroup.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="CompositGroupBox.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="GEdit.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="GroupBox.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="GStatic.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Lable.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Panel.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceptionStaticInfo.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="XButton.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildView.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildViewRec.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GuideDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="GuideReceptionDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LogoDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBox.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="OperationDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="OutOfReceptionDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceptionDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceptionHeadDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TVMDialogFlow.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="WaitingOfficeDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="WelcomeReceptionDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="InitDlg.h">
+      <Filter>Services\ForeService\InitSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="InitSvc.h">
+      <Filter>Services\ForeService\InitSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginDlg.h">
+      <Filter>Services\ForeService\LoginSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="LoginSvc.h">
+      <Filter>Services\ForeService\LoginSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkItemMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\NetworkTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\NetworkTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrinterTestMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\PrinterTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="PrinterTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\PrinterTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CardReadWriteMachineTestMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\RWTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="RWTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\RWTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="StationSetMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\StationSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="StationSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\StationSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceModeSwitchDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\DeviceModeSwitchSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceModeSwitchSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\DeviceModeSwitchSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSetBaseOfficeDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\TimeSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\TimeSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CommunicationSetMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\CommunicationSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CommunicationSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\CommunicationSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="UDSNSetMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\UDSNSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="UDSNSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\UDSNSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="RFIDSetBaseOfficeDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\RFIDSetSev</Filter>
+    </ClInclude>
+    <ClInclude Include="RFIDSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\RFIDSetSev</Filter>
+    </ClInclude>
+    <ClInclude Include="DataInputSelectMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\DataInputSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="DataInputSvc.h">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\DataInputSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="DataOutputSelectMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\DataOutputSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="DataOutputSvc.h">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\DataOutputSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveExceptionDlg.h">
+      <Filter>Services\ForeService\MaintainService\RemoveExceptionSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveExceptionSvc.h">
+      <Filter>Services\ForeService\MaintainService\RemoveExceptionSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="IssueSvc.h">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargeReceptionDlg.h">
+      <Filter>Services\ForeService\PassengerService\ChargeSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ChargeSvc.h">
+      <Filter>Services\ForeService\PassengerService\ChargeSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="AnalyzeSvc.h">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="LogoffHelper.h">
+      <Filter>Services\ForeService\LogoffSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ParamMsg.h">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SCMessageContentDefine.h">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SCMessageMakeHelper.h">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SCMessageParseHelper.h">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SCSvcDef.h">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SCSvcResult.h">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerClientSvc.h">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="TVMStatusMgr.h">
+      <Filter>Services\BackService\SCSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="BusinessTranslateSvc.h">
+      <Filter>Services\BackService\SCSvc\BusinessTranslateSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="TranscationTranslateSvc.h">
+      <Filter>Services\BackService\SCSvc\TranscationTranslateSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="EventDataSvc.h">
+      <Filter>Services\BackService\SCSvc\EventDataSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CloseOperationSequence.h">
+      <Filter>Services\BackService\SCSvc\Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectSequence.h">
+      <Filter>Services\BackService\SCSvc\Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterSyncSequence.h">
+      <Filter>Services\BackService\SCSvc\Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="MonitorSvc.h">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfirmAliveSvc.h">
+      <Filter>Services\BackService\ConfirmAliveSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="LanguageDialog.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TVM.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="PrinterHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOModuleHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusDisplayModuleHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinModuleHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="IOMonitorSvc.h">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CardTicketBoxInfoDlg.h">
+      <Filter>Services\ForeService\MaintainService\CardBoxManageSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="MaintenanceSvc.h">
+      <Filter>Services\ForeService\MaintainService</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinModuleMonitorSvc.h">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CardRWMonitorSvc.h">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CardModuleMonitorSvc.h">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="RechargeRWMonitorSvc.h">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CardBoxManageSvc.h">
+      <Filter>Services\ForeService\MaintainService\CardBoxManageSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceptionBitmapInfo.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="PictureEx.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="NavigationDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TransactionHistoryBaseDlg.h">
+      <Filter>Services\ForeService\MaintainService\TransactionHistorySvc</Filter>
+    </ClInclude>
+    <ClInclude Include="TransactionHistorySvc.h">
+      <Filter>Services\ForeService\MaintainService\TransactionHistorySvc</Filter>
+    </ClInclude>
+    <ClInclude Include="StartOperationSequence.h">
+      <Filter>Services\BackService\SCSvc\Sequences</Filter>
+    </ClInclude>
+    <ClInclude Include="IssueAreaMapDlg.h">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="LineGroup.h">
+      <Filter>Services\ForeService\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectLanguageBaseDlg.h">
+      <Filter>Services\ForeService\MaintainService\SelectLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectLanguageSvc.h">
+      <Filter>Services\ForeService\MaintainService\SelectLanguage</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcTVMOperationParam.h">
+      <Filter>Util\Param</Filter>
+    </ClInclude>
+    <ClInclude Include="CAfcAVMOperationParam.h">
+      <Filter>Util\Param</Filter>
+    </ClInclude>
+    <ClInclude Include="DataHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="CGuiParm.h">
+      <Filter>Util\IniInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinModuleTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\CoinModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinModuleMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\CoinModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinAddingBoxSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\CoinAddingBoxSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinAddingBoxSetMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\CoinAddingBoxSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchOffSetMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\SwitchOFFSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchOffSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\SwitchOFFSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CTBanknoteCountInfo.h">
+      <Filter>Util\CountInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="CTCardCountInfo.h">
+      <Filter>Util\CountInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="CTCoinCountInfo.h">
+      <Filter>Util\CountInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceStatusSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceStatusSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceStatusDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceStatusSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteAcceptModuleTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\BanknoteAcceptModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteAcceptMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\BanknoteAcceptModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseHistoryDlg.h">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseM1InfoDlg.h">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseUlInfoDlg.h">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CBaseUserInfoDlg.h">
+      <Filter>Services\ForeService\PassengerService\AnalyzeSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartCardTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\CardModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartCardTestMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\CardModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="IOModuleTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\IOModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="IOModuleTestMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\IOModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="MessagePictureBox.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductIssueSvc.h">
+      <Filter>Services\ForeService\PassengerService\ProductIssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ProductIssueReceptionDlg.h">
+      <Filter>Services\ForeService\PassengerService\ProductIssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="PassengerForeSvc.h">
+      <Filter>Services\ForeService\PassengerService</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceipPrintBaseDlg.h">
+      <Filter>Services\ForeService\MaintainService\ReceiptReprintSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ReceipPrintSvc.h">
+      <Filter>Services\ForeService\MaintainService\ReceiptReprintSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SaleStaticDetailDlg.h">
+      <Filter>Services\ForeService\MaintainService\SaleStaticSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SaleStaticOverViewDlg.h">
+      <Filter>Services\ForeService\MaintainService\SaleStaticSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="SaleStaticSvc.h">
+      <Filter>Services\ForeService\MaintainService\SaleStaticSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="PassengerResultDlg.h">
+      <Filter>Services\ForeService\PassengerService</Filter>
+    </ClInclude>
+    <ClInclude Include="LanguageMsg.h">
+      <Filter>Definition</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinBoxManageAttachCoinCollectionBoxDlg.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\AttachCoinCollectionBox</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinBoxManageAttachCoinCollectionBoxSvc.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\AttachCoinCollectionBox</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinBoxManageDetachCoinCollectionBoxDlg.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\DetachCoinCollectionBox</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinBoxManageDetachCoinCollectionBoxSvc.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\DetachCoinCollectionBox</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinBoxManageCollectCoinDlg.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\CollectCoin</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinBoxManageCollectCoinSvc.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\CollectCoin</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinBoxManageAddCoinToDedicatedChangeBoxDlg.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\AddCoinToDedicatedChangeBox</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinBoxManageAddCoinToDedicatedChangeBoxSvc.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\AddCoinToDedicatedChangeBox</Filter>
+    </ClInclude>
+    <ClInclude Include="AssistDlg.h">
+      <Filter>Services\ForeService\PassengerService\AssistSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="AssistSvc.h">
+      <Filter>Services\ForeService\PassengerService\AssistSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="StandbyDlg.h">
+      <Filter>Services\ForeService\PassengerService\StandbySvc</Filter>
+    </ClInclude>
+    <ClInclude Include="StandbySvc.h">
+      <Filter>Services\ForeService\PassengerService\StandbySvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseXML.h">
+      <Filter>Services\ForeService\PassengerService\StandbySvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ParamHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenBrightnessSetMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\ScreenBrightnessSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenBrightnessSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\ScreenBrightnessSetSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="BalanceSvc.h">
+      <Filter>Services\ForeService\MaintainService\BalanceSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="BalanceDlg.h">
+      <Filter>Services\ForeService\MaintainService\BalanceSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ModeSettingsDlg.h">
+      <Filter>Services\ForeService\MaintainService\ModeSettingsSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ModeSettingsSvc.h">
+      <Filter>Services\ForeService\MaintainService\ModeSettingsSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="MaintenanceBaseDlg.h">
+      <Filter>Services\ForeService\MaintainService</Filter>
+    </ClInclude>
+    <ClInclude Include="PassengerOperationLog.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="BankNoteCollectionModuleMonitorSvc.h">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="VersionInfoDlg.h">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\VersionInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="VersionInfoSvc.h">
+      <Filter>Services\ForeService\MaintainService\DataManageSvc\VersionInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="AllDeviceStatusMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\AllDeviceStatus</Filter>
+    </ClInclude>
+    <ClInclude Include="AllDeviceStatusSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\AllDeviceStatus</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessDlg.h">
+      <Filter>Services\ForeService\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="THHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="TVMRWHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="BHChangeHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteChangeAndInvalidBoxRemovalDlg.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxRemoval</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteChangeAndInvalidBoxRemovalSvc.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxRemoval</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteCollectingBoxInstallationDlg.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxInstallation</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteCollectingBoxInstallationSvc.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxInstallation</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteCollectingBoxRemovalDlg.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxRemoval</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteCollectingBoxRemovalSvc.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteCollectingBoxRemoval</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeAndInvalidBanknoteboxManageDlg.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxInstallation</Filter>
+    </ClInclude>
+    <ClInclude Include="ChangeAndInvalidBanknoteboxManageSvc.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteChangeAndInvalidBoxInstallation</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteChangeMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\BanknoteChangeModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteChangeModuleTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\BanknoteChangeModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="OneKeySettlementSvc.h">
+      <Filter>Services\ForeService\MaintainService\OneKeySettlement</Filter>
+    </ClInclude>
+    <ClInclude Include="OneKeySettlementDlg.h">
+      <Filter>Services\ForeService\MaintainService\OneKeySettlement</Filter>
+    </ClInclude>
+    <ClInclude Include="ComportAndBaudrateSetDlg.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\DeviceComportAndBaudrateSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="ComportAndBaudrateSetSvc.h">
+      <Filter>Services\ForeService\MaintainService\SystemSetSvc\DeviceComportAndBaudrateSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateDump.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="BRHModuleHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiParaMgr.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteBoxCollectionDlg.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteBoxCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="BanknoteBoxCollectionSvc.h">
+      <Filter>Services\ForeService\MaintainService\BanknoteBoxManageSvc\BanknoteBoxCollection</Filter>
+    </ClInclude>
+    <ClInclude Include="WebServerHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="PrinterMonitorSvc.h">
+      <Filter>Services\BackService\MonitorSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenHelper.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseStationMap.h">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="CTTokenCountInfo.h">
+      <Filter>Util\CountInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenModuleMaintainDlg.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\TokenModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenModuleTestSvc.h">
+      <Filter>Services\ForeService\MaintainService\DeviceTestSvc\TokenModuleTestSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="QRCodeHelper.h">
+      <Filter>Util\SoftwareHelper</Filter>
+    </ClInclude>
+    <ClInclude Include="IssueWithCashDlg.h">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="IssueWithSvtDlg.h">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="IssueWithNetDlg.h">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="AllLineShowBox.h">
+      <Filter>Services\ForeService\PassengerService\IssueSvc</Filter>
+    </ClInclude>
+    <ClInclude Include="InstallCoinChangeBoxDlg.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\InstallCoinChangeBox</Filter>
+    </ClInclude>
+    <ClInclude Include="InstallCoinChangeBoxSvc.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\InstallCoinChangeBox</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveCoinChangeBoxDlg.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\RemoveCoinChangeBox</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveCoinChangeBoxSvc.h">
+      <Filter>Services\ForeService\MaintainService\CoinBoxManageSvc\RemoveCoinChangeBox</Filter>
+    </ClInclude>
+    <ClInclude Include="ExceptionInfo.h">
+      <Filter>ExceptionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="PrinterException.h">
+      <Filter>Util\HardwareHelper</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

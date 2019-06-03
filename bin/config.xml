@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--********************************************************************************************-->
+<!--                Configuration file for Gate Application                                     -->
+<!--********************************************************************************************-->
+
+<!--********************************************************************************************-->
+<!-- Note: Please don't add comments before the xml version line, otherwise it 
+           will casue xml parsing error                                                         -->
+<!--********************************************************************************************-->
+
+<!-- Start of xml document -->
+<config>
+    <!-- TIM related configuration -->
+    <module name="LogInfo">
+        <item name="TraceLog">E:\log\</item>         		<!-- Log Output Directory -->  
+        													<!-- WARNING!!! The Directorypath must exist,otherwise the log will not be output -->
+        													<!-- Max Size of Characters is 127 -->
+        													<!-- For example : E:\log\-->
+        													
+        <item name="LogFileName">THCom_%YYYY%MM%DD</item> 	<!-- Log filename-->
+        												    <!-- WARNING!!! if LogFileName is NULL ,the serial communication log is not output -->
+        													<!-- Max Size of Characters is 127 -->
+													        <!-- %YYYY:Current year -->
+													        <!-- %MM:Cureent month -->
+													        <!-- %DD:Current day  -->
+													        <!-- For example %YYYY%MM%DD = 20161210 -->
+													        <!-- Common Values : THCom_%YYYY%MM%DD -->
+													        
+        <item name="LogSuffix">log</item>      	     		<!-- Log Suffix -->
+        													<!-- Max Size of Characters is 19 -->
+    </module>
+</config> <!-- End of xml document -->
+

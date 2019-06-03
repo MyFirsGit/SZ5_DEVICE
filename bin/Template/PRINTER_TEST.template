@@ -1,0 +1,10 @@
+          打印测试
+
+请确认打印内容是否正确
+
+0123456789－ABCDEFGHIJKLMNOPQRSTUVWXYZ
+-------------------------------------
+打印时间  ： {PRINT_TIME}
+车站名称  ： {STATION_NAME}
+设备编号  ： {DEVICE_CODE}
+操作员ID  ： {USER_ID}

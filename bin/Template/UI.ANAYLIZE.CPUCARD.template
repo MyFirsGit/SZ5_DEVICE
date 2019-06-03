@@ -1,0 +1,14 @@
+          车票编号：    {TICKET_NUMBER}
+          车票种类：    {TICKET_KIND}
+          票卡类型：    {TICKET_RGION}
+          票卡状态：    {TICKET_STATUS}
+          启用日期：    {TICKET_ENABLE_DATE}
+            有效期：    {TICKET_VALIDATE}
+          票内余额：    {TICKET_BALANCE}
+              押金：    {TICKET_DEPOSIT}
+          旅程状态：    {JOURNEY_STATUS}
+          进站车站：    {ENTER_STATION}
+          进站时间：    {ENTER_TIME}
+          出站车站：    {EXIT_STATION}
+          出站时间：    {EXIT_TIME}
+          使用车站：    {USE_STATION}	
